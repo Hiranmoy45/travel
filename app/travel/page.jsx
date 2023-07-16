@@ -82,7 +82,7 @@ const page = () => {
 
   return (
   <>
-      <div className="main-content w-full px-[var(--margin-x)] pb-8">
+      <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden">
   <div className="flex items-center justify-between space-x-2 py-5">
     <h3 className="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl">
       Travel
