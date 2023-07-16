@@ -1,6 +1,6 @@
 
 import './globals.css';
-import ClientOnly from "./client-layout";
+import ClientOnly from "./Clientonly";
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
