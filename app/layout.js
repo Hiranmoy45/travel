@@ -1,5 +1,4 @@
-'use client'
-import { useEffect } from 'react';
+
 import './globals.css';
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,13 +19,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   
  
-  useEffect(() => {
-  
-      toast.success('Logout Successful!', {
-        theme: "dark",
-      });
-
-  }, []);
 
   return (
     <>
