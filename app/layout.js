@@ -1,6 +1,6 @@
 
 import './globals.css';
-
+import ClientOnly from "./client-layout";
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <html lang="en" className='dark'>
 
         <body className={inter.className}>
-          {/* enable for min side bar has-min-sidebar ,for sidebar open add is-sidebar-open*/}
+          {/* enable for min side bar has-min-sidebar ,for sidebar open add is-sidebar-open*/}<ClientOnly>
           <div className="is-header-blur">
             <div
               id="root"
@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
               <ToastContainer />
             </div>
           </div>
+          </ClientOnly>
         </body>
       </html>
     </>
