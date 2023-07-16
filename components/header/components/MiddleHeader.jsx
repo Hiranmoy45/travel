@@ -1,10 +1,17 @@
 'use client'
-import React , {useState} from 'react';
+import React , {useState ,useEffect} from 'react';
 import Link from 'next/link';
 import Ping from './Ping';
 const MiddleHeader = () => {
-    const [activeTab,setActiveTab]=useState("home");
+    const [activeTab,setActiveTab]=useState("/");  
+    
   
+    useEffect(() => {
+      const pathName = location.pathname;
+      setActiveTab(pathName);
+    }, [])
+    
+
     const handleTabClick = (tab) => {
         setActiveTab(tab);
       };
@@ -14,10 +21,10 @@ const MiddleHeader = () => {
      
       <div className="flex items-center space-x-2 ">
       {[
-      { tab: "home", label: "Home" },
-      { tab: "travel", label: "Our Products" },
-      { tab: "about", label: "About Us" },
-      { tab: "contact", label: "Contact Us" }
+      { tab: "/", label: "Home" },
+      { tab: "/travel", label: "Our Products" },
+      { tab: "/about", label: "About Us" },
+      { tab: "/contact", label: "Contact Us" }
     ].map((item) => (
         <>
         <Link href={item.tab}    key={item.tab}
