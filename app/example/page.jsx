@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
-const Page = () => {
+function Page() {
   
   const slides = [
     {
