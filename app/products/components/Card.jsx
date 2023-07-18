@@ -1,16 +1,16 @@
 import React from "react";
-import Image from 'next/image'
+
 const Card = ({ dataSet }) => {
   return (
     <>
     
 
 <div className="flex lg:w-72 sm:w-full shrink-0 flex-col">
-        <Image
+        <Img
           className="h-48 w-full rounded-2xl object-cover object-center"
           src={dataSet.imageUrl}
           alt="image"
-          width={100}
+         
         />
         <div className="card mx-2 -mt-8 grow rounded-2xl p-3.5">
           <div className="flex space-x-2">
