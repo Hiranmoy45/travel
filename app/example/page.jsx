@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
-const page = () => {
+const Page = () => {
   
   const slides = [
     {
@@ -120,4 +120,4 @@ const next=()=>{
   );
 };
 
-export default page;
+export default Page;
