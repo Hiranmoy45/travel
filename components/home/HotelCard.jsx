@@ -23,7 +23,7 @@ const Card = ({ dataSet }) => {
         </div>
         <div className="flex items-end justify-between">
           <p className="mt-2">
-            <span className="text-base font-medium text-slate-700 dark:text-navy-100">${dataSet.price}</span>
+            <span className="text-base font-medium text-slate-700 dark:text-navy-100">&#x20b9;{dataSet.price}</span>
             <span className="text-xs text-slate-400 dark:text-navy-300">/day</span>
           </p>
           <p className="flex shrink-0 items-center space-x-1">

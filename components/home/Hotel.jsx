@@ -9,7 +9,7 @@ const Hotel = () => {
           bedCount: '2 beds',
           adults: '5 Adult',
           hotelName: 'Crowne Plaza.',
-          price: '$80',
+          price: '80',
           rating: '4.8',
           imageUrl: 'https://lineone.piniastudio.com/images/travel/hotel-3.jpg'
         },
@@ -18,7 +18,7 @@ const Hotel = () => {
           bedCount: '3 beds',
           adults: '3 Adult',
           hotelName: 'Sunset Lodge.',
-          price: '$100',
+          price: '100',
           rating: '4.9',
           imageUrl: 'https://lineone.piniastudio.com/images/travel/hotel-1.jpg'
         },
@@ -27,7 +27,7 @@ const Hotel = () => {
           bedCount: '1 beds',
           adults: '2 Adult',
           hotelName: 'Hotel Elite.',
-          price: '$120',
+          price: '120',
           rating: '4.9',
           imageUrl: 'https://lineone.piniastudio.com/images/travel/hotel-5.jpg', // Replace this with the actual image URL for each item
         },
@@ -36,7 +36,7 @@ const Hotel = () => {
           bedCount: '2 beds',
           adults: '5 Adult',
           hotelName: 'Hotel Bliss.',
-          price: '$90',
+          price: '90',
           rating: '4.5',
           imageUrl: 'https://lineone.piniastudio.com/images/travel/hotel-7.jpg', // Replace this with the actual image URL for each item
         },
@@ -45,7 +45,7 @@ const Hotel = () => {
           bedCount: '3 beds',
           adults: '3 Adult',
           hotelName: 'Emerald Bay Inn.',
-          price: '$100',
+          price: '100',
           rating: '4.9',
           imageUrl: 'https://lineone.piniastudio.com/images/travel/hotel-8.jpg', // Replace this with the actual image URL for each item
         },
@@ -54,7 +54,7 @@ const Hotel = () => {
           bedCount: '3 beds',
           adults: '3 Adult',
           hotelName: 'Emerald Bay Inn.',
-          price: '$100',
+          price: '100',
           rating: '4.9',
           imageUrl: 'https://lineone.piniastudio.com/images/travel/hotel-8.jpg', // Replace this with the actual image URL for each item
         },
@@ -63,7 +63,7 @@ const Hotel = () => {
           bedCount: '3 beds',
           adults: '3 Adult',
           hotelName: 'Emerald Bay Inn.',
-          price: '$100',
+          price: '100',
           rating: '4.9',
           imageUrl: 'https://lineone.piniastudio.com/images/travel/hotel-8.jpg', // Replace this with the actual image URL for each item
         },
