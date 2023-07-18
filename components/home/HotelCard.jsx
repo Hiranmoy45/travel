@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Card = ({dataSet}) => {
-    
+const Card = ({ dataSet }) => {
   return (
-    <div className="flex w-72 shrink-0 flex-col">
+    <>
+ <div className="flex w-72 shrink-0 flex-col">
       <img className="h-48 w-full rounded-2xl object-cover object-center" src={dataSet.imageUrl} alt="image" />
       <div className="card mx-2 -mt-8 grow rounded-2xl p-3.5">
         <div className="flex space-x-2">
@@ -35,6 +35,7 @@ const Card = ({dataSet}) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

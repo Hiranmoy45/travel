@@ -1,85 +1,195 @@
-import React from 'react';
+import React from 'react'
+import Card from './Card';
+import TravelCard from './components/TravelCard';
+import TravelList from './components/TravelList';
 
-function MyComponent() {
-  const buttons = [
-    {
-      icon: (
-        <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <path fill="currentColor" fillOpacity=".3" d="M5 14.059c0-1.01 0-1.514.222-1.945.221-.43.632-.724 1.453-1.31l4.163-2.974c.56-.4.842-.601 1.162-.601.32 0 .601.2 1.162.601l4.163 2.974c.821.586 1.232.88 1.453 1.31.222.43.222.935.222 1.945V19c0 .943 0 1.414-.293 1.707C18.414 21 17.943 21 17 21H7c-.943 0-1.414 0-1.707-.293C5 20.414 5 19.943 5 19v-4.94Z" />
-        <path fill="currentColor" d="M3 12.387c0 .267 0 .4.084.441.084.041.19-.04.4-.204l7.288-5.669c.59-.459.885-.688 1.228-.688.343 0 .638.23 1.228.688l7.288 5.669c.21.163.316.245.4.204.084-.04.084-.174.084-.441v-.409c0-.48 0-.72-.102-.928-.101-.208-.291-.355-.67-.65l-7-5.445c-.59-.459-.885-.688-1.228-.688-.343 0-.638.23-1.228.688l-7 5.445c-.379.295-.569.442-.67.65-.102.208-.102.448-.102.928v.409Z" />
-        <path fill="currentColor" d="M11.5 15.5h1A1.5 1.5 0 0 1 14 17v3.5h-4V17a1.5 1.5 0 0 1 1.5-1.5Z" />
-        <path fill="currentColor" d="M17.5 5h-1a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5Z" />
-      </svg>
-      ),
-      label: 'Dashboards',
-    },
-    {
-      icon: (
-        <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5 8H19V16C19 17.8856 19 18.8284 18.4142 19.4142C17.8284 20 16.8856 20 15 20H9C7.11438 20 6.17157 20 5.58579 19.4142C5 18.8284 5 17.8856 5 16V8Z" fill="currentColor" fillOpacity="0.3" />
-        <path d="M12 8L11.7608 5.84709C11.6123 4.51089 10.4672 3.5 9.12282 3.5V3.5C7.68381 3.5 6.5 4.66655 6.5 6.10555V6.10555C6.5 6.97673 6.93539 7.79026 7.66025 8.2735L9.5 9.5" stroke="currentColor" strokeLinecap="round" />
-        <path d="M12 8L12.2392 5.84709C12.3877 4.51089 13.5328 3.5 14.8772 3.5V3.5C16.3162 3.5 17.5 4.66655 17.5 6.10555V6.10555C17.5 6.97673 17.0646 7.79026 16.3397 8.2735L14.5 9.5" stroke="currentColor" strokeLinecap="round" />
-        <rect x={4} y={8} width={16} height={3} rx={1} fill="currentColor" />
-        <path d="M12 11V15" stroke="currentColor" strokeLinecap="round" />
-      </svg>
-      ),
-      label: 'Apps',
-    },
-    {
-      icon: (
-        <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9.85714 3H4.14286C3.51167 3 3 3.51167 3 4.14286V9.85714C3 10.4883 3.51167 11 4.14286 11H9.85714C10.4883 11 11 10.4883 11 9.85714V4.14286C11 3.51167 10.4883 3 9.85714 3Z" fill="currentColor" />
-        <path d="M9.85714 12.8999H4.14286C3.51167 12.8999 3 13.4116 3 14.0428V19.757C3 20.3882 3.51167 20.8999 4.14286 20.8999H9.85714C10.4883 20.8999 11 20.3882 11 19.757V14.0428C11 13.4116 10.4883 12.8999 9.85714 12.8999Z" fill="currentColor" fillOpacity="0.3" />
-        <path d="M19.757 3H14.0428C13.4116 3 12.8999 3.51167 12.8999 4.14286V9.85714C12.8999 10.4883 13.4116 11 14.0428 11H19.757C20.3882 11 20.8999 10.4883 20.8999 9.85714V4.14286C20.8999 3.51167 20.3882 3 19.757 3Z" fill="currentColor" fillOpacity="0.3" />
-        <path d="M19.757 12.8999H14.0428C13.4116 12.8999 12.8999 13.4116 12.8999 14.0428V19.757C12.8999 20.3882 13.4116 20.8999 14.0428 20.8999H19.757C20.3882 20.8999 20.8999 20.3882 20.8999 19.757V14.0428C20.8999 13.4116 20.3882 12.8999 19.757 12.8999Z" fill="currentColor" fillOpacity="0.3" />
-      </svg>
-      ),
-      label: 'Pages',
-    },
-    {
-      icon: (
-        <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fillOpacity="0.25" d="M21.0001 16.05V18.75C21.0001 20.1 20.1001 21 18.7501 21H6.6001C6.9691 21 7.3471 20.946 7.6981 20.829C7.7971 20.793 7.89609 20.757 7.99509 20.712C8.31009 20.586 8.61611 20.406 8.88611 20.172C8.96711 20.109 9.05711 20.028 9.13811 19.947L9.17409 19.911L15.2941 13.8H18.7501C20.1001 13.8 21.0001 14.7 21.0001 16.05Z" fill="currentColor" />
-        <path fillOpacity="0.5" d="M17.7324 11.361L15.2934 13.8L9.17334 19.9111C9.80333 19.2631 10.1993 18.372 10.1993 17.4V8.70601L12.6384 6.26701C13.5924 5.31301 14.8704 5.31301 15.8244 6.26701L17.7324 8.17501C18.6864 9.12901 18.6864 10.407 17.7324 11.361Z" fill="currentColor" />
-        <path d="M7.95 3H5.25C3.9 3 3 3.9 3 5.25V17.4C3 17.643 3.02699 17.886 3.07199 18.12C3.09899 18.237 3.12599 18.354 3.16199 18.471C3.20699 18.606 3.252 18.741 3.306 18.867C3.315 18.876 3.31501 18.885 3.31501 18.885C3.32401 18.885 3.32401 18.885 3.31501 18.894C3.44101 19.146 3.585 19.389 3.756 19.614C3.855 19.731 3.95401 19.839 4.05301 19.947C4.15201 20.055 4.26 20.145 4.377 20.235L4.38601 20.244C4.61101 20.415 4.854 20.559 5.106 20.685C5.115 20.676 5.11501 20.676 5.11501 20.685C5.25001 20.748 5.385 20.793 5.529 20.838C5.646 20.874 5.76301 20.901 5.88001 20.928C6.11401 20.973 6.357 21 6.6 21C6.969 21 7.347 20.946 7.698 20.829C7.797 20.793 7.89599 20.757 7.99499 20.712C8.30999 20.586 8.61601 20.406 8.88601 20.172C8.96701 20.109 9.05701 20.028 9.13801 19.947L9.17399 19.911C9.80399 19.263 10.2 18.372 10.2 17.4V5.25C10.2 3.9 9.3 3 7.95 3ZM6.6 18.75C5.853 18.75 5.25 18.147 5.25 17.4C5.25 16.653 5.853 16.05 6.6 16.05C7.347 16.05 7.95 16.653 7.95 17.4C7.95 18.147 7.347 18.75 6.6 18.75Z" fill="currentColor" />
-      </svg>
-      ),
-      label: 'Forms',
-    },
-    {
-      icon: (
-        <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fillOpacity="0.5" d="M14.2498 16C14.2498 17.5487 13.576 18.9487 12.4998 19.9025C11.5723 20.7425 10.3473 21.25 8.99976 21.25C6.10351 21.25 3.74976 18.8962 3.74976 16C3.74976 13.585 5.39476 11.5375 7.61726 10.9337C8.22101 12.4562 9.51601 13.6287 11.1173 14.0662C11.5548 14.1887 12.0185 14.25 12.4998 14.25C12.981 14.25 13.4448 14.1887 13.8823 14.0662C14.1185 14.6612 14.2498 15.3175 14.2498 16Z" fill="currentColor" />
-        <path d="M17.75 9.00012C17.75 9.68262 17.6187 10.3389 17.3825 10.9339C16.7787 12.4564 15.4837 13.6289 13.8825 14.0664C13.445 14.1889 12.9813 14.2501 12.5 14.2501C12.0187 14.2501 11.555 14.1889 11.1175 14.0664C9.51625 13.6289 8.22125 12.4564 7.6175 10.9339C7.38125 10.3389 7.25 9.68262 7.25 9.00012C7.25 6.10387 9.60375 3.75012 12.5 3.75012C15.3962 3.75012 17.75 6.10387 17.75 9.00012Z" fill="currentColor" />
-        <path fillOpacity="0.3" d="M21.25 16C21.25 18.8962 18.8962 21.25 16 21.25C14.6525 21.25 13.4275 20.7425 12.5 19.9025C13.5763 18.9487 14.25 17.5487 14.25 16C14.25 15.3175 14.1187 14.6612 13.8825 14.0662C15.4837 13.6287 16.7787 12.4562 17.3825 10.9337C19.605 11.5375 21.25 13.585 21.25 16Z" fill="currentColor" />
-      </svg>
-      ),
-      label: 'Components',
-    },
-  ];
+const page = () => {
+    const travelData = [
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/NJ/LL/BV/127954530/commercial-fountain-construction-service-500x500.JPG',
+          name: 'Commercial Fountain Construction Service',
+          location: 'Guwahati',
+          rating: '4.5',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/GY/OP/XG/127954530/outdoor-playground-construction-services-500x500.jpg',
+          name: 'Playground',
+          location: 'PAN India',
+          rating: '4.2',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/RT/EV/ZZ/127954530/swimming-pool-water-treatment-500x500.jpeg',
+          name: ' Structure	Light Gauge Steel Construction',
+          location: '	PAN India',
+          rating: '4.8',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2023/4/298917939/ND/BN/SC/127954530/prefabricated-frp-swimming-pool-500x500.jpeg',
+          name: 'Destination 4',
+          location: 'Location 4',
+          rating: '4.0',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/PS/TQ/KL/127954530/commercial-fountain-construction-service-500x500.png',
+          name: 'Destination 5',
+          location: 'Location 5',
+          rating: '4.6',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/HA/TK/YS/127954530/water-fountain-500x500.png',
+          name: 'Destination 6',
+          location: 'Location 6',
+          rating: '4.7',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/LZ/TN/JF/127954530/water-fountain-500x500.jpg',
+          name: 'Destination 7',
+          location: 'Location 7',
+          rating: '4.3',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/VX/FR/IE/127954530/commercial-tensile-structure-construction-service-500x500.jpg',
+          name: ' Structure	Light Gauge Steel Construction',
+          location: 'PAN India',
+          rating: '4.8',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/VC/KG/NW/127954530/swimming-pool-water-treatment-500x500.jpeg',
+          name: 'Destination 9',
+          location: 'Location 9',
+          rating: '3.9',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/RY/ZJ/SP/127954530/swimming-pool-water-treatment-500x500.jpeg',
+          name: 'Destination 7',
+          location: 'Location 7',
+          rating: '4.3',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/OR/PT/BF/127954530/swimming-pool-water-treatment-500x500.JPG',
+          name: 'Destination 8',
+          location: 'Location 8',
+          rating: '4.9',
+        },
+        {
+          imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/8/RY/ZJ/SP/127954530/swimming-pool-water-treatment-500x500.jpeg',
+          name: 'Destination 9',
+          location: 'Location 9',
+          rating: '3.9',
+        },
+      ];
+      
 
   return (
-    <>
+  <>
       <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden">
-        <div className="is-scrollbar-hidden -mx-2 hidden h-12 items-center space-x-2 overflow-y-auto font-inter sm:flex">
-          {buttons.map((button, index) => (
-            <div className="inline-flex" key={index}>
-              <button
-                x-ref="popperRef"
-                className="btn space-x-2 px-2 py-1.5 text-xs+ font-medium leading-none"
-                // Add the appropriate class based on your condition (isShowPopper)
-                // Replace the condition in the ternary operator below
-                // class={isShowPopper ? 'bg-slate-150 text-slate-800 dark:bg-navy-500 dark:text-navy-100' : 'text-slate-600 hover:text-slate-800 hover:bg-slate-300/20 active:bg-slate-300/25 dark:text-navy-200 dark:hover:text-navy-100 dark:hover:bg-navy-300/20 dark:active:bg-navy-300/25'}
-              >
-                {button.icon}
-                <span>{button.label}</span>
-              </button>
-            </div>
-          ))}
+  <div className="flex items-center justify-between space-x-2 py-5">
+    <h3 className="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl">
+      Travel
+    </h3>
+    <div>
+      <a href="#" className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">Explore the world</a>
+    </div>
+  </div>
+  <div className="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
+    <div className="col-span-12 lg:col-span-8">
+      <div className="flex items-center justify-between space-x-3 sm:space-x-5">
+        <div className="flex w-full max-w-lg">
+          <label className="relative flex w-full">
+            <input className="form-input peer h-9 w-full rounded-l-lg bg-white px-3 py-2 shadow-soft ring-primary/50 placeholder:text-slate-400 focus:ring dark:bg-navy-700 dark:shadow-none dark:ring-accent/50 dark:placeholder:text-navy-300 lg:pl-9" placeholder="Location, Country or Destination..." type="text" />
+            <span className="pointer-events-none absolute hidden h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent lg:flex">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4.5 w-4.5 transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3.316 13.781l.73-.171-.73.171zm0-5.457l.73.171-.73-.171zm15.473 0l.73-.171-.73.171zm0 5.457l.73.171-.73-.171zm-5.008 5.008l-.171-.73.171.73zm-5.457 0l-.171.73.171-.73zm0-15.473l-.171-.73.171.73zm5.457 0l.171-.73-.171.73zM20.47 21.53a.75.75 0 101.06-1.06l-1.06 1.06zM4.046 13.61a11.198 11.198 0 010-5.115l-1.46-.342a12.698 12.698 0 000 5.8l1.46-.343zm14.013-5.115a11.196 11.196 0 010 5.115l1.46.342a12.698 12.698 0 000-5.8l-1.46.343zm-4.45 9.564a11.196 11.196 0 01-5.114 0l-.342 1.46c1.907.448 3.892.448 5.8 0l-.343-1.46zM8.496 4.046a11.198 11.198 0 015.115 0l.342-1.46a12.698 12.698 0 00-5.8 0l.343 1.46zm0 14.013a5.97 5.97 0 01-4.45-4.45l-1.46.343a7.47 7.47 0 005.568 5.568l.342-1.46zm5.457 1.46a7.47 7.47 0 005.568-5.567l-1.46-.342a5.97 5.97 0 01-4.45 4.45l.342 1.46zM13.61 4.046a5.97 5.97 0 014.45 4.45l1.46-.343a7.47 7.47 0 00-5.568-5.567l-.342 1.46zm-5.457-1.46a7.47 7.47 0 00-5.567 5.567l1.46.342a5.97 5.97 0 014.45-4.45l-.343-1.46zm8.652 15.28l3.665 3.664 1.06-1.06-3.665-3.665-1.06 1.06z" />
+              </svg>
+            </span>
+          </label>
+          <button className="btn h-9 rounded-l-none bg-primary px-3 font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90 lg:px-5">
+            <span className="hidden lg:inline-flex">Search</span>
+            <svg className="h-4.5 w-4.5 lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </div>
+        <div className="flex">
+          <button className="btn h-8 w-8 shrink-0 rounded-full p-0 text-slate-700 hover:bg-slate-300/20 hover:text-primary focus:bg-slate-300/20 focus:text-primary active:bg-slate-300/25 dark:text-navy-100 dark:hover:bg-navy-300/20 dark:hover:text-accent dark:focus:bg-navy-300/20 dark:focus:text-accent dark:active:bg-navy-300/25">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit={10} d="M22 6.5h-9.5M6 6.5H2M9 9a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM22 17.5h-6M9.5 17.5H2M13 20a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" />
+            </svg>
+          </button>
+          <button className="btn h-8 w-8 shrink-0 rounded-full p-0 text-slate-700 hover:bg-slate-300/20 hover:text-primary focus:bg-slate-300/20 focus:text-primary active:bg-slate-300/25 dark:text-navy-100 dark:hover:bg-navy-300/20 dark:hover:text-accent dark:focus:bg-navy-300/20 dark:focus:text-accent dark:active:bg-navy-300/25">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+              <path d="M3 2.5h-.5v4H6.501V6L6.5 3v-.5H3zM3 10h-.5v4H6.501v-.5l-.001-3V10H3zm0 7.5h-.5v4H6.501V21L6.5 18v-.5H3zM6 7H3c-.551 0-1-.45-1-1V3c0-.55.449-1 1-1h3c.551 0 1 .45 1 1v3c0 .55-.449 1-1 1zm15.75-2.75a.25.25 0 110 .5h-12a.25.25 0 110-.5h12zM6 14.5H3c-.551 0-1-.45-1-1v-3c0-.55.449-1 1-1h3c.551 0 1 .45 1 1v3c0 .55-.449 1-1 1zm15.75-2.75a.25.25 0 110 .5h-12a.25.25 0 110-.5h12zM6 22H3c-.551 0-1-.45-1-1v-3c0-.55.449-1 1-1h3c.551 0 1 .45 1 1v3c0 .55-.449 1-1 1zm15.75-2.75a.25.25 0 110 .5h-12a.25.25 0 110-.5h12z" />
+            </svg>
+          </button>
         </div>
       </div>
-    </>
-  );
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:mt-5 sm:grid-cols-2 sm:gap-5 lg:mt-6 lg:gap-6 xl:grid-cols-3">
+        <Card/>
+       
+      </div>
+    </div>
+    <div className="col-span-12 lg:col-span-4">
+      <div className="card px-4 pb-5 sm:px-5">
+        <div className="flex items-center justify-between py-3">
+          <h2 className="text-sm+ font-medium tracking-wide text-slate-700 dark:text-navy-100">
+            Top Hotels
+          </h2>
+          <div x-data="usePopper({placement:'bottom-end',offset:4})"  className="inline-flex">
+            <button x-ref="popperRef" className="btn -mr-1.5 h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+              </svg>
+            </button>
+            <div x-ref="popperRoot" className="popper-root" >
+              <div className="popper-box rounded-md border border-slate-150 bg-white py-1.5 font-inter dark:border-navy-500 dark:bg-navy-700">
+                <ul>
+                  <li>
+                    <a href="#" className="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Action</a>
+                  </li>
+                  <li>
+                    <a href="#" className="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Another Action</a>
+                  </li>
+                  <li>
+                    <a href="#" className="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Something else</a>
+                  </li>
+                </ul>
+                <div className="my-1 h-px bg-slate-150 dark:bg-navy-500" />
+                <ul>
+                  <li>
+                    <a href="#" className="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Separated Link</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="space-y-4">
+        {travelData.slice(0, 6).map((destination, index) => (
+        <TravelCard key={index} destination={destination} />
+      ))}
+        </div>
+      </div>
+      <div className="mt-4 sm:mt-5">
+        <div className="flex items-center justify-between">
+          <h2 className="text-base font-medium tracking-wide text-slate-700 dark:text-navy-100">
+            My Plan
+          </h2>
+          <div x-data="usePopper({placement:'bottom-end',offset:4})"  className="inline-flex">
+            <button x-ref="popperRef" className="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+              </svg>
+            </button>
+          
+          </div>
+        </div>
+      <TravelList/>
+      </div>
+    </div>
+  </div>
+</div>
+  </>
+  )
 }
 
-export default MyComponent;
+export default page
