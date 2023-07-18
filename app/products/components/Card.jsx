@@ -6,7 +6,7 @@ const Card = ({ dataSet }) => {
     
 
 <div className="flex lg:w-72 sm:w-full shrink-0 flex-col">
-        <Img
+        <img
           className="h-48 w-full rounded-2xl object-cover object-center"
           src={dataSet.imageUrl}
           alt="image"
