@@ -1,13 +1,13 @@
-
 import './globals.css';
 import ClientOnly from "./Clientonly";
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-
+import AppContextProvider from '@/context/AppContext';
 
 import Header from '@/components/header/Header';
 
 import { Inter } from 'next/font/google';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,13 +19,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
 
-
   return (
     <>
-      <html lang="en" className='dark'>
+      <html lang="en" className=''>
 
         <body className={inter.className}>
           {/* enable for min side bar has-min-sidebar ,for sidebar open add is-sidebar-open*/}<ClientOnly>
+            <AppContextProvider>
           <div className="is-header-blur">
             <div
               id="root"
@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
               <ToastContainer />
             </div>
           </div>
+          </AppContextProvider>
           </ClientOnly>
         </body>
       </html>
