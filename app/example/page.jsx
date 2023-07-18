@@ -42,7 +42,7 @@ const page = () => {
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, [currentSlide ,slides.length]);
 const prev=()=>{
     const nextSlide = currentSlide == 0  ? slides.length-1 : currentSlide - 1;
       setCurrentSlide(nextSlide);
