@@ -8,7 +8,9 @@ export const AppContext = createContext();
 
 export default function AppContextProvider({ children }) {
   
-  const [theme,setTheme]=useState(false);
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem('darkMode') === 'true' // Check localStorage for initial value
+  );
 
  
   //Total Contacts 
@@ -18,7 +20,7 @@ export default function AppContextProvider({ children }) {
 
   //data filling pending
   const value = {
-    theme,setTheme,
+    darkMode, setDarkMode,
   };
 
   //step2

@@ -1,11 +1,13 @@
 'use client'
-import React , {useState,useEffect} from "react";
+import React , {useState,useEffect, useContext} from "react";
 
 import Rightheaderbutton from "./components/Rightheaderbutton";
 import MiddleHeader from "./components/MiddleHeader";
+import { AppContext } from "@/context/AppContext";
 
 
 const Header = () => {
+  const {darkMode}=useContext(AppContext);
   const [isScreenSizeLessThan800, setScreenSizeLessThan800] = useState(false);
   const [isScreenSizeLessThan650, setScreenSizeLessThan650] = useState(false);
 
@@ -37,7 +39,7 @@ const Header = () => {
           {/* Left: Sidebar Toggle Button */}
           <div className="h-7">
             <button className="menu-toggle ml-0.5 flex h-7  flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80">
-            <img className="h-8 w-auto" src="https://i.ibb.co/GMkrP48/download.png" alt=""/>
+            <img className="h-14 w-20" src={`${darkMode?'images/saptakdark-logo.png':'images/saptak_logo.png'}`} alt=""/>
             </button>
           </div>
           {!isScreenSizeLessThan800 && <MiddleHeader/>}

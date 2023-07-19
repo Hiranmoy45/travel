@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './Card';
+import Card from './TravelCard';
 import TravelCard from './components/TravelCard';
 import TravelList from './components/TravelList';
 

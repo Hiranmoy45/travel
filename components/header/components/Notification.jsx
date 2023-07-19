@@ -1,15 +1,16 @@
-import React,{useEffect,useState} from 'react'
+'use client'
+import React,{useContext, useEffect} from 'react'
 import Notificmodel from './Notificmodel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPalette } from '@fortawesome/free-solid-svg-icons';
 import Notificationsvg from './svg/Notification'
 import Boardsvg from './svg/Boardsvg'
 
+import { AppContext } from '@/context/AppContext';
 
 const Notification = () => {
-  const [darkMode, setDarkMode] = useState(
-    () => localStorage.getItem('darkMode') === 'true' // Check localStorage for initial value
-  );
+  const {darkMode , setDarkMode} = useContext(AppContext);
+ 
 
   
   useEffect(() => {
