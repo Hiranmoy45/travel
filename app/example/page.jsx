@@ -1,9 +1,10 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+
 import './index.css';
 
 function Page() {
-  
+ 
   const slides = [
     {
       id: 1,
@@ -54,6 +55,7 @@ const next=()=>{
      
 }
   return (
+    <>
     <div className="carousel relative container mx-auto max-w-2xl" style={{ maxWidth: "1600px" }}>
       <div className="carousel-inner relative overflow-hidden w-full">
         {slides.map((slide) => (
@@ -117,6 +119,8 @@ const next=()=>{
         </ol>
       </div>
     </div>
+  
+    </>
   );
 };
 

@@ -15,6 +15,7 @@ export default function Home() {
  <Travel/>
  <Company/>
  <Footer/>
+ 
  </div>
    </>
   )

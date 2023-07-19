@@ -7,6 +7,7 @@ import AppContextProvider from '@/context/AppContext';
 import Header from '@/components/header/Header';
 
 import { Inter } from 'next/font/google';
+import MobileNav from '@/components/header/MobileNav';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -38,14 +39,18 @@ export default function RootLayout({ children }) {
               <nav className="header before:bg-white dark:before:bg-navy-750 print:hidden">
                 <Header />
               </nav>
-
+                
               {/* <!-- Mobile Searchbar --> */}
               {/* <MobileSearchBar /> */}
               {/* This is Main Page */}
               {children}
+              <MobileNav/>
+              <MobileNav/>
+              
               <ToastContainer />
             </div>
           </div>
+        
           </AppContextProvider>
           </ClientOnly>
         </body>
