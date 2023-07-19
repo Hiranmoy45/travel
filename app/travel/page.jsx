@@ -5,7 +5,7 @@ import travelData from '@/data';
 import TravelList from './components/TravelList';
 import Top from './components/Top';
 
-const page = () => {
+const Page = () => {
   const [loading, setLoading] = useState(false);
 
   // Search states
@@ -123,4 +123,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
