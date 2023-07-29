@@ -124,7 +124,7 @@ const Contact = () => {
       title: 'Contact us by email',
       description: 'If you wish to write us an email instead please use',
       link: '#',
-      linkText: 'example@site.com',
+      linkText: 'examplesite.com',
     },
   ];
   return (
