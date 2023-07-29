@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
-import Hotelcard from './Hotelcard'
+import Hotelcard from './HotelCard';
+
 
 const Hotel = () => {
     const dataSet = [
@@ -76,7 +77,7 @@ const Hotel = () => {
   <div className="rounded-l-lg bg-slate-150 pb-1 pt-4 dark:bg-navy-800">
   <div className="flex items-center justify-between space-x-2 py-5 pr-4">
     <h2 className="line-clamp-1 px-4 text-base font-medium tracking-wide text-slate-700 dark:text-navy-100 sm:px-5 lg:text-lg">
-      Top Hotels
+      Top Products
     </h2>
     <div>
       <Link href="products" className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">view all</Link>
