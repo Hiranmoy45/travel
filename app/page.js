@@ -5,7 +5,7 @@ import Footer from "@/components/footer/Footer.jsx"
 import Company from "@/components/home/Company.jsx"
 import Main from './example/page.jsx'
 import Contact from "./contact/Cont.jsx"
-import AboutUs from "./about/AboutUs.jsx"
+import AboutUs from "./about/Aboutus.jsx"
 
 export default function Home() {
   return (
