@@ -87,6 +87,7 @@ const Hotel = () => {
       {dataSet.map((hotel, index) => <Hotelcard dataSet={hotel} key={index}  />)}
    
      
+
     </div>
   </div>
 </div>
