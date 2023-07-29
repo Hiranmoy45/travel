@@ -1,11 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-
-
-
-
-const AboutUs = () => {
+const Aboutus = () => {
   const cardsData = [
     {
       icon: (
@@ -120,7 +116,7 @@ const AboutUs = () => {
       description: "Our GST Number is 18ALFPP0252R4ZJ.",
     },
   ];
-  
+
   return (
     <>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -137,4 +133,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Aboutus;
