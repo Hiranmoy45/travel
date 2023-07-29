@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import Card from './HotelCard'
+import Card from './Hotelcard'
 
 const Hotel = () => {
     const dataSet = [
