@@ -1,11 +1,10 @@
 import React from 'react'
-import AboutUs from './Aboutus'
-
+import Aboutus from './Aboutus'
 
 const page = () => {
   return (
    <>
-   <AboutUs/>
+   <Aboutus/>
  
    </>
   )
