@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import Card from './Hotelcard'
+import Hotelcard from './Hotelcard'
 
 const Hotel = () => {
     const dataSet = [
@@ -84,7 +84,7 @@ const Hotel = () => {
     </div>
     <div className="scrollbar-sm mt-4 flex space-x-4 overflow-x-auto px-4 pb-4 sm:px-5">
    
-      {dataSet.map((hotel, index) => <Card dataSet={hotel} key={index}  />)}
+      {dataSet.map((hotel, index) => <Hotelcard dataSet={hotel} key={index}  />)}
    
      
     </div>
