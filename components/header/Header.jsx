@@ -4,6 +4,7 @@ import React , {useState,useEffect, useContext} from "react";
 import Rightheaderbutton from "./components/Rightheaderbutton";
 import MiddleHeader from "./components/MiddleHeader";
 import { AppContext } from "@/context/AppContext";
+import Link from "next/link";
 
 
 const Header = () => {
@@ -38,9 +39,11 @@ const Header = () => {
         <div className="flex w-full items-center justify-between">
           {/* Left: Sidebar Toggle Button */}
           <div className="h-7">
+            <Link href="/">
             <button className="menu-toggle ml-0.5 flex h-7  flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80">
             <img className="h-14 w-20" src={`${darkMode?'images/saptakdark-logo.png':'images/saptak_logo.png'}`} alt=""/>
             </button>
+            </Link>
           </div>
           {!isScreenSizeLessThan800 && <MiddleHeader/>}
           

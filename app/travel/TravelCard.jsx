@@ -1,7 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 
-
-const Card = ({ imageSrc, name, location, rating }) => {
+const Card = ({id, imageSrc, name, location, rating }) => {
   return (
     <div className="card">
     <img className="h-80 w-full rounded-lg object-cover" src={imageSrc} alt="image" />
@@ -15,10 +15,11 @@ const Card = ({ imageSrc, name, location, rating }) => {
       </div>
       <div className="rounded-lg bg-gradient-to-t from-[#19213299] via-[#19213266] to-transparent px-4 py-3 pt-14">
         <div>
-          <a href="#" className="line-clamp-2 text-base font-semibold text-white">
+          <Link href={`house/${id}`} className="line-clamp-2 text-base font-semibold text-white hover:text-primary-focus">
           {name}
-          </a>
+          </Link>
         </div>
+
         <div className="mt-1 flex items-center space-x-3 text-slate-200">
           <p className="flex items-center space-x-1">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

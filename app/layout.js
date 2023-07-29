@@ -1,4 +1,6 @@
 import './globals.css';
+
+// import 'swiper/css';
 import ClientOnly from "./Clientonly";
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,6 +10,7 @@ import Header from '@/components/header/Header';
 
 import { Inter } from 'next/font/google';
 import MobileNav from '@/components/header/MobileNav';
+import Footer from '@/components/footer/Footer';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -23,7 +26,9 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en" className=''>
-
+      <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.css" />
+      </head>
         <body className={inter.className}>
           {/* enable for min side bar has-min-sidebar ,for sidebar open add is-sidebar-open*/}<ClientOnly>
             <AppContextProvider>
@@ -50,7 +55,7 @@ export default function RootLayout({ children }) {
               <ToastContainer />
             </div>
           </div>
-        
+        <Footer/>
           </AppContextProvider>
           </ClientOnly>
         </body>

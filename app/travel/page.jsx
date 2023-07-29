@@ -2,8 +2,8 @@
 import React,{useState} from 'react'
 import TravelCard from './TravelCard';
 import travelData from '@/data';
-import TravelList from './components/TravelList';
-import Top from './components/Top';
+
+import Link from 'next/link';
 
 const Page = () => {
   const [loading, setLoading] = useState(false);
@@ -42,10 +42,10 @@ const Page = () => {
       <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden">
   <div className="flex items-center justify-between space-x-2 py-5">
     <h3 className="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl">
-      Travel
+      Our Products
     </h3>
     <div>
-      <a href="#" className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">Explore the world</a>
+      <Link href="/" className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">Back to Home</Link>
     </div>
   </div>
   <div className="grid gap-4 sm:gap-5 lg:gap-6">
@@ -95,29 +95,7 @@ const Page = () => {
     </div>
  
   </div>
-  {/* This is Top hotel My plan page */}
-  <div className="flex justify-between space-x-2 lg:flex-row flex-col">
-     <Top/>
-     <Top/>
-      <div className="card w-96 px-4 pb-5 sm:px-5 mt-4">
-      <div className="mt-4 sm:mt-5">
-        <div className="flex items-center justify-between">
-          <h2 className="text-base font-medium tracking-wide text-slate-700 dark:text-navy-100">
-            My Plan
-          </h2>
-          <div x-data="usePopper({placement:'bottom-end',offset:4})"  className="inline-flex">
-            <button x-ref="popperRef" className="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-              </svg>
-            </button>
-          
-          </div>
-        </div>
-      <TravelList/>
-      </div>
-      </div>
-    </div>
+
 </div>
   </>
   )

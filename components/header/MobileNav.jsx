@@ -52,8 +52,11 @@ const MobileNav = () => {
             </Link>
 </>
     ))}
-       
+     
           </ul>
+           {/* <div className='pb-1 pt-1 flex items-center justify-center  '>
+      <button type="submit" className="bg-red-500 border-0 outline-none text-white px-6 py-3 w-72 rounded-lg text-lg md:text-base md:mt-10 md:mb-15 md:rounded-md">Check Availability</button>
+      </div> */}
         </div>
       </nav>
     </>
