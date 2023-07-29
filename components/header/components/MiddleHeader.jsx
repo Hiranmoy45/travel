@@ -31,7 +31,7 @@ const MiddleHeader = () => {
         className={`btn shrink-0 rounded-none border-b-2 px-3.5 py-2.5 relative ${
           activeTab === item.tab
             ? "border-primary dark:border-accent text-primary dark:text-accent-light"
-            : "border-transparent hover:text-slate-800 focus:text-slate-800 dark:hover:text-navy-100 dark:focus:text-navy-100"
+            : "border-transparent block  text-gray-800 dark:text-white hover:text-slate-800 focus:text-slate-800 dark:hover:text-navy-100 dark:focus:text-navy-100"
         }`}
         onClick={() => handleTabClick(item.tab)}>
             

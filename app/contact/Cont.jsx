@@ -136,7 +136,7 @@ const Contact = () => {
             Contact us
           </h1>
           <p className="mt-1 text-gray-600 dark:text-gray-400">
-            We'd love to talk about how we can help you.
+            We had love to talk about how we can help you.
           </p>
         </div>
         <div className="mt-12 grid items-center lg:grid-cols-2 gap-6 lg:gap-16">

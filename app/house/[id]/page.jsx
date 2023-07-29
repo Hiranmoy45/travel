@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import Slider from "./Slider";
-const page = ({params}) => {
+const Page = ({params}) => {
    
     console.log(params?.id);
     const [data, setData] = useState(null);
@@ -186,4 +186,4 @@ const page = ({params}) => {
   );
 };
 
-export default page;
+export default Page;
