@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputField = ({ label, name, type, placeholder }) => (
+const inputField = ({ label, name, type, placeholder }) => (
   <div>
     <label htmlFor={name} className="sr-only">
       {label}
@@ -147,26 +147,26 @@ const Contact = () => {
             <form>
               <div className="grid gap-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <InputField
+                  <inputField
                     label="First Name"
                     name="hs-firstname-contacts-1"
                     type="text"
                     placeholder="First Name"
                   />
-                  <InputField
+                  <inputField
                     label="Last Name"
                     name="hs-lastname-contacts-1"
                     type="text"
                     placeholder="Last Name"
                   />
                 </div>
-                <InputField
+                <inputField
                   label="Email"
                   name="hs-email-contacts-1"
                   type="email"
                   placeholder="Email"
                 />
-                <InputField
+                <inputField
                   label="Phone Number"
                   name="hs-phone-number-1"
                   type="text"

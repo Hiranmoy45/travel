@@ -143,7 +143,7 @@ const AboutUs = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6 md:gap-10">
           {/* Card */}
           {cardsData.map((card, index) => (
-            <Card key={index} {...card} />
+            <Card {...card}  key={index}/>
           ))}
 
           {/* End Card */}
