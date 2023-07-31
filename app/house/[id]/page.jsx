@@ -59,7 +59,7 @@ const Page = ({params}) => {
             </div>
           </div>
         </div>
-        <div class="gallery">
+        <div className="gallery">
           <div className="gallery-img-1 card "> 
             
           <Slider data={data}/>
