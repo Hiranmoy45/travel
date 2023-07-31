@@ -7,6 +7,7 @@ import Main from './example/page.jsx'
 import Contact from "./contact/Cont.jsx"
 import AboutUs from "./about/components/Aboutus.jsx"
 
+
 export default function Home() {
   return (
    <>
