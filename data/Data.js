@@ -88,8 +88,10 @@ export const  travelData = [
   const newtravelData = [
     {
       imageSrc: ['awning1.webp', 'awning2.webp','awning3.webp', 'awning4.webp','awning5.webp', 'awning6.webp'],
-      name: 'Commercial Fountain Construction Service',
+      name: 'Retractable Awning Construction Services',
+      info:['Material:Aluminium','USage/Application:Outdoor','Color:Red','Shape:Rectangular' , 'Service Location:PAN India', 'Service Mode : Offline'],
       location: 'Guwahati',
+      price:'270',
       rating: '4.5',
     },
     {
