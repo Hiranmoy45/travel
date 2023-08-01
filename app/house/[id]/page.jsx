@@ -109,7 +109,7 @@ const Page = ({params}) => {
           <li>
             <FontAwesomeIcon icon={faPaintBrush} className="fa" />
             Enhanced Clean
-            <span>This host has committed to staybnb's cleaning process.</span>
+            <span>This host has committed to staybnb cleaning process.</span>
           </li>
 
           <li>
@@ -157,7 +157,7 @@ const Page = ({params}) => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           <b>Guwahati , Assam , India</b>
-          <p>It's like a home away from home.</p>
+          <p>It is like a home away from home.</p>
         </div>
         <br className="line" />
         <div className="host">
@@ -172,8 +172,9 @@ const Page = ({params}) => {
                 <FontAwesomeIcon icon={faStarHalfAlt} className="icon" />
                 <FontAwesomeIcon icon={farStar} className="icon" />
               </span>{" "}
-              &nbsp; &nbsp; 245 reviews &nbsp; &nbsp; Response rate 100% &nbsp;
-              & nbsp; Response time : 60 min
+              {/* &nbsp; &nbsp; 245 reviews &nbsp; &nbsp; Response rate 100% &nbsp;
+              & nbsp; Response time : 60 min */}
+              This is response rate section
             </p>
           </div>
         </div>
