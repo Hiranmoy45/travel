@@ -1,7 +1,6 @@
 .house-details {
     padding: 0 12%;
 }
-
 .house-title {
     margin-top: 100px;
 }
@@ -9,7 +8,6 @@
 .house-title h1 {
     font-weight: 600;
 }
-
 .house-title .row {
     display: flex;
     flex-wrap: wrap;
@@ -30,13 +28,16 @@
     display: grid;
     grid-gap: 10px;
     grid-template-areas: 'first first . .''first first . .';
-    margin: 40px 0px;
+    margin: 10px 0px;
+    
 }
 
 .gallery div img {
     width: 100%;
     display: block;
     border-radius: 20px;
+    height: 50%;
+    margin-top: 0%;
 
 }
 .ok{
@@ -47,6 +48,8 @@
 
 .gallery-img-1 {
     grid-area: first;
+  
+    
 }
 
 .small-details h2{

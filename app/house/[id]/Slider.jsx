@@ -39,44 +39,20 @@ const Slider = ({data}) => {
   return (
     <>
       <div className=" overflow-auto">
-        <div className="swiper rounded-lg">
+        <div className="swiper rounded-lg ">
           <div className="swiper-wrapper">
-            <div className="swiper-slide h-full">
+          {data.imageSrc.map((data, index) => (
+            <div className="swiper-slide" key={index}>
               <img
                 className="h-full w-full object-cover ok"
-                src={data.imageSrc}
-                loading="lazy"
+                src={`/images/all/${data}`}
+                                loading="lazy"
                 alt="image"
               />
               <div className="swiper-lazy-preloader" />
             </div>
-            <div className="swiper-slide h-full">
-              <img
-                className="h-full w-full object-cover"
-                src={data.imageSrc}
-                alt="image"
-                loading="lazy"
-              />
-              <div className="swiper-lazy-preloader" />
-            </div>
-            <div className="swiper-slide h-full">
-              <img
-                className="h-full w-full object-cover"
-                src={data.imageSrc}
-                alt="image"
-                loading="lazy"
-              />
-              <div className="swiper-lazy-preloader" />
-            </div>
-            <div className="swiper-slide h-full">
-              <img
-                className="h-full w-full object-cover"
-                src={data.imageSrc}
-                alt="image"
-                loading="lazy"
-              />
-              <div className="swiper-lazy-preloader" />
-            </div>
+          ))}
+           
           </div>
           <div className="swiper-pagination" />
           <div className="swiper-button-next" onClick={goNextSlide} />

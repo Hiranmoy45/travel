@@ -1,25 +1,14 @@
-import React from 'react';
-
-const Inputfield = ({ label, name, type, placeholder }) => (
-  <div>
-    <label htmlFor={name} className="sr-only">
-      {label}
-    </label>
-    <input
-      type={type}
-      name={name}
-      id={name}
-      className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
-      placeholder={placeholder}
-    />
-  </div>
-);
+"use client";
+import React, { useContext, useState } from "react";
+import { AppContext } from "@/context/AppContext";
 
 const IconBlock = ({ icon, title, description, link, linkText }) => (
   <div className="flex gap-x-7 py-6">
     {icon}
     <div>
-      <h3 className="font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
+      <h3 className="font-semibold text-gray-800 dark:text-gray-200">
+        {title}
+      </h3>
       <p className="mt-1 text-sm text-gray-500">{description}</p>
       {link && (
         <a
@@ -49,7 +38,6 @@ const IconBlock = ({ icon, title, description, link, linkText }) => (
 );
 
 const Contact = () => {
-
   const iconBlocks = [
     {
       icon: (
@@ -65,10 +53,10 @@ const Contact = () => {
           <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
         </svg>
       ),
-      title: 'Knowledgebase',
+      title: "Knowledgebase",
       description: "We're here to help with any questions or code.",
-      link: '#',
-      linkText: 'Contact support',
+      link: "#",
+      linkText: "Contact support",
     },
     {
       icon: (
@@ -84,10 +72,10 @@ const Contact = () => {
           <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
         </svg>
       ),
-      title: 'FAQ',
-      description: 'Search our FAQ for answers to anything you might ask.',
-      link: '#',
-      linkText: 'Visit FAQ',
+      title: "FAQ",
+      description: "Search our FAQ for answers to anything you might ask.",
+      link: "#",
+      linkText: "Visit FAQ",
     },
     {
       icon: (
@@ -103,10 +91,10 @@ const Contact = () => {
           <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z" />
         </svg>
       ),
-      title: 'Developer APIs',
-      description: 'Check out our development quickstart guide.',
-      link: '#',
-      linkText: 'Contact sales',
+      title: "Developer APIs",
+      description: "Check out our development quickstart guide.",
+      link: "#",
+      linkText: "Contact sales",
     },
     {
       icon: (
@@ -121,77 +109,127 @@ const Contact = () => {
           <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
         </svg>
       ),
-      title: 'Contact us by email',
-      description: 'If you wish to write us an email instead please use',
-      link: '#',
-      linkText: 'examplesite.com',
+      title: "Contact us by email",
+      description: "If you wish to write us an email instead please use",
+      link: "#",
+      linkText: "examplesite.com",
     },
   ];
+  const { submit , loading} = useContext(AppContext);
+
+  const handlesubmit = () => {
+    submit();
+  };
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Access form field values from state
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      message,
+      number,
+    };
+
+    // Do whatever you want with the form data here (e.g., send it to the server)
+    // For demonstration purposes, we'll just log it to the console
+    console.log(formData);
+    submit(formData);
+    // You can reset the form fields after submission, if needed
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setMessage("");
+    setNumber("");
+  };
   return (
     <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden">
-    <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-      <div className="max-w-2xl lg:max-w-5xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
-            Contact us
-          </h1>
-          <p className="mt-1 text-gray-600 dark:text-gray-400">
-            We had love to talk about how we can help you.
-          </p>
-        </div>
-        <div className="mt-12 grid items-center lg:grid-cols-2 gap-6 lg:gap-16">
-          <div className="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-8 dark:border-gray-700">
-            <h2 className="mb-8 text-xl font-semibold text-gray-800 dark:text-gray-200">
-              Fill in the form
-            </h2>
-            <form>
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="max-w-2xl lg:max-w-5xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
+              Contact us
+            </h1>
+            <p className="mt-1 text-gray-600 dark:text-gray-400">
+              We had love to talk about how we can help you.
+            </p>
+          </div>
+          <div className="mt-12 grid items-center lg:grid-cols-2 gap-6 lg:gap-16">
+            <div className="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-8 dark:border-gray-700">
+              <h2 className="mb-8 text-xl font-semibold text-gray-800 dark:text-gray-200">
+                Fill in the form
+              </h2>
+
               <div className="grid gap-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Inputfield
-                    label="First Name"
-                    name="hs-firstname-contacts-1"
+                  <div>
+                    <label className="sr-only">First Name</label>
+                    <input
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      type="text"
+                      placeholder="First Name"
+                      className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
+                    />
+                  </div>
+                  <div>
+                    <label className="sr-only">Last Name</label>
+                    <input
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      type="text"
+                      placeholder="Last Name"
+                      className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="sr-only">Email</label>
+                  <input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     type="text"
-                    placeholder="First Name"
+                    placeholder="Email"
+                    className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
                   />
-                  <Inputfield
-                    label="Last Name"
-                    name="hs-lastname-contacts-1"
+                </div> 
+                <div>
+                  <label className="sr-only">Phone Number</label>
+                  <input
+                    value={number}
+                    onChange={(e) => setNumber(e.target.value)}
                     type="text"
-                    placeholder="Last Name"
+                    placeholder="Phone Number"
+                    className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
                   />
                 </div>
-                <Inputfield
-                  label="Email"
-                  name="hs-email-contacts-1"
-                  type="email"
-                  placeholder="Email"
-                />
-                <Inputfield
-                  label="Phone Number"
-                  name="hs-phone-number-1"
-                  type="text"
-                  placeholder="Phone Number"
-                />
                 <div>
                   <label htmlFor="hs-about-contacts-1" className="sr-only">
                     Details
                   </label>
                   <textarea
-                    id="hs-about-contacts-1"
-                    name="hs-about-contacts-1"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    type="text"
                     rows={4}
                     className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
-                    placeholder="Details"
-                    defaultValue={""}
                   />
                 </div>
               </div>
               <div className="mt-4 grid">
                 <button
-                  type="submit"
+                  onClick={handleFormSubmit}
                   className="inline-flex justify-center items-center gap-x-3 text-center bg-blue-600 hover:bg-blue-700 border border-transparent text-sm lg:text-base text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
                 >
-                  Send Requirement
+                  {loading?'loading':' Send Requirement'}
+                 
                 </button>
               </div>
               <div className="mt-3 text-center">
@@ -199,16 +237,15 @@ const Contact = () => {
                   We will get back to you in 1-2 business days.
                 </p>
               </div>
-            </form>
+            </div>
+            <div className="divide-y divide-gray-200 dark:divide-gray-800">
+              {iconBlocks.map((block, index) => (
+                <IconBlock key={index} {...block} />
+              ))}
+            </div>
           </div>
-          <div className="divide-y divide-gray-200 dark:divide-gray-800">
-        {iconBlocks.map((block, index) => (
-          <IconBlock key={index} {...block} />
-        ))}
-      </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

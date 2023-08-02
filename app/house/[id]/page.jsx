@@ -3,7 +3,7 @@ import React ,{useState , useEffect} from "react";
 import "../index.css";
 import Link from "next/link";
 
- import travelData from "@/data";
+import { newtravelData } from "@/data/Data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStar,
@@ -12,6 +12,7 @@ import {
   faPaintBrush,
   faMapMarkerAlt,
   faHeart,
+  faArrowAltCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import Slider from "./Slider";
@@ -24,7 +25,7 @@ const Page = ({params}) => {
 
     // Simulate fetching the data based on the provided ID
     useEffect(() => {
-      const item = travelData.find((item) => item.id == params?.id);
+      const item = newtravelData.find((item) => item.id == params?.id);
       setData(item);
     }, [params?.id]);
   
@@ -37,8 +38,7 @@ const Page = ({params}) => {
       <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden house-details">
 
         <div className="house-title ">
-          <h1 className="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">
-            Wenge House
+          <h1 className="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">{data.name}
           </h1>
           <div className="row">
             <div>
@@ -59,30 +59,32 @@ const Page = ({params}) => {
             </div>
           </div>
         </div>
-        <div className="gallery">
-          <div className="gallery-img-1 card "> 
-            
-          <Slider data={data}/>
-        
-          </div>
-          <div>
-            <img src={data.imageSrc} alt="gallery" />
-          </div>
-          <div>
-            <img src={data.imageSrc} alt="gallery" />
-          </div>
-          <div>
-            <img src={data.imageSrc} alt="gallery" />
-          </div>
-          <div>
-            <img src={data.imageSrc} alt="gallery" />
-          </div>
-        </div>
+   
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+  {/* Left Side (One Image) */}
+  <div className="md:col-span-1 ">
+    {/* <img src="/images/all/school.webp" alt="Left Image" className="w-full h-auto" />
+     */}
+      <Slider data={data}/>
+  </div>
+  {/* Right Side (Four Images) */}
+  <div className="md:col-span-2 grid grid-cols-2 gap-4 ">
+  {data.imageSrc.slice(1,5).map((data, index) => (
+    <div className="col-span-1">
+      <img src={`/images/all/${data}`} alt="Right Image 1" className="w-full h-52 object-cover rounded-lg" />
+    </div>
+  ))}
+
+
+  </div>
+</div>
+     
         <div className="small-details">
-          <h2 className="text-xl text-slate-800 dark:text-navy-50">Entire rental unit hosted by Brandon</h2>
+          <h2 className="text-xl text-slate-800 dark:text-navy-50">{data.name}</h2>
           <p className="text-slate-700 dark:text-navy-100">2 guest &nbsp; &nbsp; 2 beds &nbsp; &nbsp; 1 bathroom</p>
-          <h4 className="text-2xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">$ 100/day</h4>
+          <h4 className="text-2xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl "> &#x20b9; {data.price}</h4>
         </div>
+
         <hr className="line" />
         <form className="check-form dark:bg-navy-700 dark:text-white">
           <div>
@@ -100,34 +102,36 @@ const Page = ({params}) => {
           <button type="submit">Check Availability</button>
         </form>
         <ul className="details-list">
-          <li>
-            <FontAwesomeIcon icon={faHome} className="fa" />
-            Entire Home
-            <span>You will have the entire flat for you.</span>
-          </li>
+        {
+  data.info.map((info, index) => {
+    const parts = info.split(':');
+    const ftag = parts[0];
+    const ltag = parts[1];
 
-          <li>
-            <FontAwesomeIcon icon={faPaintBrush} className="fa" />
-            Enhanced Clean
-            <span>This host has committed to staybnb cleaning process.</span>
+    return (
+      <>
+    
+      <li className="dark:text-white">
+           
+            <FontAwesomeIcon icon={faArrowAltCircleRight} className="fa dark:text-white" />
+            <span className="absolute -right-px -top-px flex h-3 w-3 items-center justify-center">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-80" />
+                  <span className="inline-flex h-2 w-2 rounded-full bg-primary" />
+                </span>
+                
+            {ftag}
+            <span>{ltag}</span>
           </li>
+          </>
+    );
+  })
+}
+         
 
-          <li>
-            <FontAwesomeIcon icon={faMapMarkerAlt} className="fa" />
-            Great Location
-            <span>90% of recent guests gave the location a 5 star rating.</span>
-          </li>
-
-          <li>
-            <FontAwesomeIcon icon={faHeart} className="fa" />
-            Great Check-in Experience
-            <span>
-              100% of recent guests gave the check-in process a 5 star rating.
-            </span>
-          </li>
+         
         </ul>
         <hr className="line" />
-        <p className="home-desc">
+        <p className="home-desc dark:text-white">
           Guests are welcome to join the NCSN on activities such as Birdwatching
           and Hiking at an additional charge (which can be availed of at the
           premises) and learn about nature and the need to preserve it Lorem
@@ -146,7 +150,7 @@ const Page = ({params}) => {
         </p>
         <hr className="line" />
         <div className="map">
-          <h3>Location on Map</h3>
+          <h3 className="dark:text-white">Location on Map</h3>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7160.636081482584!2d91.74045119170589!3d26.186330508349954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a25e55856b1%3A0x5e71de52f9b47851!2sPan%20Bazaar%2C%20Guwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1689797582230!5m2!1sen!2sin"
             width="600"
@@ -156,29 +160,27 @@ const Page = ({params}) => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-          <b>Guwahati , Assam , India</b>
-          <p>It is like a home away from home.</p>
+          <b className=" dark:text-white">Guwahati , Assam , India</b>
+          <p className=" dark:text-white">It is like a home away from home.</p>
         </div>
         <br className="line" />
         <div className="host">
-          <img src="images/100x100.png" />
+          <img src="/images/saptak_logo.png" />
           <div>
-            <h2>Hosteďby Brandon</h2>
-            <p>
+            <h2 className=" dark:text-white">Saptak Exterio</h2>
+            <p className=" dark:text-white">
               <span>
                 <FontAwesomeIcon icon={faStar} className="icon" />
                 <FontAwesomeIcon icon={faStar} className="icon" />
                 <FontAwesomeIcon icon={faStar} className="icon" />
                 <FontAwesomeIcon icon={faStarHalfAlt} className="icon" />
                 <FontAwesomeIcon icon={farStar} className="icon" />
-              </span>{" "}
-              {/* &nbsp; &nbsp; 245 reviews &nbsp; &nbsp; Response rate 100% &nbsp;
-              & nbsp; Response time : 60 min */}
-              This is response rate section
+              </span>
+              Response rate 100%
             </p>
           </div>
         </div>
-        <Link href="#" className="contact-host">
+        <Link href="#" className="contact-host dark:text-white">
           Contact Host
         </Link>
       </div>

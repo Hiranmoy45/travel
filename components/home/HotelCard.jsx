@@ -1,27 +1,25 @@
 import React from "react";
 
 const Hotelcard = ({ dataSet }) => {
+
+
   return (
     <>
       <div className="flex w-72 shrink-0 flex-col">
-        <img
-          className="h-48 w-full rounded-2xl object-cover object-center"
-          src={dataSet.imageUrl}
-          alt="image"
-        />
+        <img src={`images/all/${dataSet.imageSrc[1]}`}  className="h-48 w-full rounded-2xl object-cover object-center" alt="imagess"  />
         <div className="card mx-2 -mt-8 grow rounded-2xl p-3.5">
           <div className="flex space-x-2">
             <div
               className={`badge rounded-full ${
-                dataSet.badgeType === "lux" ? "bg-warning" : "bg-secondary"
+                dataSet.price > "10,000" ? "bg-warning" : "bg-secondary"
               } py-1 uppercase text-white`}
             >
-              {dataSet.badgeType}
+              {dataSet.location }
             </div>
             <div className="flex flex-wrap items-center font-inter text-xs uppercase">
               <p>{dataSet.bedCount}</p>
               <div className="mx-2 my-1 w-px self-stretch bg-slate-200 dark:bg-navy-500" />
-              <p>{dataSet.adults} Adult</p>
+              <p>Book Now</p>
             </div>
           </div>
           <div className="mt-2">
@@ -38,7 +36,7 @@ const Hotelcard = ({ dataSet }) => {
                 &#x20b9;{dataSet.price}
               </span>
               <span className="text-xs text-slate-400 dark:text-navy-300">
-                /day
+                /Square Feet
               </span>
             </p>
             <p className="flex shrink-0 items-center space-x-1">

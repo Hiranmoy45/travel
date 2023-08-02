@@ -2,9 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 const Card = ({id, imageSrc, name, location, rating }) => {
+  console.log(imageSrc[0]);
   return (
     <div className="card">
-    <img className="h-80 w-full rounded-lg object-cover" src={imageSrc} alt="image" />
+    <img className="h-80 w-full rounded-lg object-cover" src={`/images/all/${imageSrc[0]}`} alt="image" />
     <div className="absolute inset-0 flex h-full w-full flex-col justify-between">
       <div className="flex justify-end p-3">
         <button className="flex items-center justify-center h-7 w-7 rounded-full bg-black/20 p-0 hover:bg-black/30 focus:bg-black/30">

@@ -1,9 +1,11 @@
 'use client'
-import React,{useState} from 'react'
+import React,{useState , useEffect} from 'react'
 import TravelCard from './TravelCard';
-import travelData from '@/data';
+import { newtravelData } from '@/data/Data';
+
 
 import Link from 'next/link';
+
 
 const Page = () => {
   const [loading, setLoading] = useState(false);
@@ -15,7 +17,7 @@ const Page = () => {
 
   const filterPrompts = (searchtext) => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
-    return travelData.filter(
+    return newtravelData.filter(
       (item) =>
         regex.test(item.name) ||
         regex.test(item.location) 
@@ -35,7 +37,12 @@ const Page = () => {
     );
   };
       
-     
+    // Assuming this code is in a React component or any JavaScript environment
+
+
+
+
+ 
 
   return (
   <>
@@ -87,7 +94,7 @@ const Page = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <TravelCard travelData={searchText ? searchedResults : travelData}/>
+        <TravelCard travelData={searchText ? searchedResults : newtravelData}/>
       )}
         
        
