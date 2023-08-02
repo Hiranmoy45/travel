@@ -12,7 +12,7 @@ export default function AppContextProvider({ children }) {
     () => localStorage.getItem('darkMode') === 'true' // Check localStorage for initial value
   );
   const [loading,setLoading] =useState(false);
-
+  const [data, setData] = useState([]);
  const submit=(formData)=>{
   setLoading(true);
     async function sendEmail(formData) {
@@ -71,7 +71,7 @@ export default function AppContextProvider({ children }) {
 
   //data filling pending
   const value = {
-    darkMode, setDarkMode,submit,loading,
+    darkMode, setDarkMode,submit,loading,data, setData,
   };
 
   //step2

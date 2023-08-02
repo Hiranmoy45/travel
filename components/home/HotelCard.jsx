@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hotelcard = ({ dataSet }) => {
@@ -6,7 +7,9 @@ const Hotelcard = ({ dataSet }) => {
   return (
     <>
       <div className="flex w-72 shrink-0 flex-col">
+      <Link href={`house/${dataSet.id}`}>
         <img src={`images/all/${dataSet.imageSrc[1]}`}  className="h-48 w-full rounded-2xl object-cover object-center" alt="imagess"  />
+        </Link>
         <div className="card mx-2 -mt-8 grow rounded-2xl p-3.5">
           <div className="flex space-x-2">
             <div

@@ -27,7 +27,7 @@ const MiddleHeader = () => {
       { tab: "/contact", label: "Contact Us" }
     ].map((item , index) => (
         <>
-        <Link key={item.label} href={item.tab}
+        <Link  href={item.tab} key={index}
         className={`btn shrink-0 rounded-none border-b-2 px-3.5 py-2.5 relative ${
           activeTab === item.tab
             ? "border-primary dark:border-accent text-primary dark:text-accent-light"

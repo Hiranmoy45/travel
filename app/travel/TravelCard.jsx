@@ -1,15 +1,47 @@
-import React from 'react';
+'use client'
+import React, { useState , useEffect, useContext} from 'react';
 import Link from 'next/link';
+import { toast } from 'react-toastify';
+import { AppContext } from '@/context/AppContext';
 
 const Card = ({id, imageSrc, name, location, rating }) => {
-  console.log(imageSrc[0]);
+const {setData} = useContext(AppContext);
+  const [isDataSaved, setIsDataSaved] = useState(false);
+  useEffect(() => {
+    const existingData = JSON.parse(localStorage.getItem('cards')) || [];
+   
+    const specificDataItem = existingData.find(item => item.id === id);
+    setIsDataSaved(specificDataItem);
+  }, [id ,isDataSaved])
+  const handleCardClick = () => {
+    // Get the existing data from local storage (if any)
+    const existingData = JSON.parse(localStorage.getItem('cards')) || [];
+    const specificDataItem = existingData.find(item => item.id === id);
+    if(!specificDataItem){
+      const newData = [...existingData, { id, imageSrc, name, location, rating }];
+      setIsDataSaved(true);
+        // Save the new data to local storage
+        localStorage.setItem('cards', JSON.stringify(newData));
+        toast.success("added successfully");
+    }else{
+      
+    const filteredData = existingData.filter(item => item.id !== id);
+    localStorage.setItem('cards', JSON.stringify(filteredData));
+      toast.success("removed");
+      setData(filteredData);
+    }
+    // Add the clicked card data to the existing data
+    
+  };
+
+
   return (
     <div className="card">
     <img className="h-80 w-full rounded-lg object-cover" src={`/images/all/${imageSrc[0]}`} alt="image" />
     <div className="absolute inset-0 flex h-full w-full flex-col justify-between">
       <div className="flex justify-end p-3">
-        <button className="flex items-center justify-center h-7 w-7 rounded-full bg-black/20 p-0 hover:bg-black/30 focus:bg-black/30">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4.5 w-4.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button className="flex items-center justify-center h-7 w-7 rounded-full bg-black/20 p-0 hover:bg-black/30 focus:bg-black/30" onClick={handleCardClick}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4.5 w-4.5 text-white " fill={`${isDataSaved?'red':'none'}`} viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
           </svg>
         </button>
