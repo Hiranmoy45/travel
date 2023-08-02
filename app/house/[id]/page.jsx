@@ -70,7 +70,7 @@ const Page = ({params}) => {
   {/* Right Side (Four Images) */}
   <div className="md:col-span-2 grid grid-cols-2 gap-4 ">
   {data.imageSrc.slice(1,5).map((data, index) => (
-    <div className="col-span-1">
+    <div className="col-span-1" key={index}>
       <img src={`/images/all/${data}`} alt="Right Image 1" className="w-full h-52 object-cover rounded-lg" />
     </div>
   ))}
@@ -111,7 +111,7 @@ const Page = ({params}) => {
     return (
       <>
     
-      <li className="dark:text-white">
+      <li className="dark:text-white" key={index}>
            
             <FontAwesomeIcon icon={faArrowAltCircleRight} className="fa dark:text-white" />
             <span className="absolute -right-px -top-px flex h-3 w-3 items-center justify-center">
