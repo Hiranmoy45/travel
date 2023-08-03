@@ -16,6 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import Slider from "./Slider";
+import Form from "./components/Form";
 const Page = ({ params }) => {
   console.log(params?.id);
   const [data, setData] = useState(null);
@@ -92,21 +93,7 @@ const Page = ({ params }) => {
         </div>
 
         <hr className="line" />
-        <form className="check-form dark:bg-navy-700 dark:text-white">
-          <div>
-            <label>Check-in</label>
-            <input type="text" placeholder="Add Date" />
-          </div>
-          <div>
-            <label>Check-out</label>
-            <input type="text" placeholder="Add Date" />
-          </div>
-          <div className="guest-field">
-            <label>Guest</label>
-            <input type="text" placeholder="2 guest" />
-          </div>
-          <button type="submit">Check Availability</button>
-        </form>
+       <Form data={data}/>
         <ul className="details-list">
           {data.info.map((info, index) => {
             const parts = info.split(":");

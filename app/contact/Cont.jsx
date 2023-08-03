@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext, useState } from "react";
 import { AppContext } from "@/context/AppContext";
+import { toast } from "react-toastify";
 
 const IconBlock = ({ icon, title, description, link, linkText }) => (
   <div className="flex gap-x-7 py-6">
@@ -115,39 +116,38 @@ const Contact = () => {
       linkText: "examplesite.com",
     },
   ];
-  const { submit , loading} = useContext(AppContext);
+  const { submit, loading } = useContext(AppContext);
 
-  const handlesubmit = () => {
-    submit();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
-  const [message, setMessage] = useState("");
 
   const handleFormSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    // Access form field values from state
-    const formData = {
-      firstName,
-      lastName,
-      email,
-      message,
-      number,
-    };
-
-    // Do whatever you want with the form data here (e.g., send it to the server)
-    // For demonstration purposes, we'll just log it to the console
-    console.log(formData);
+    event.preventDefault();
+    if (!formData.firstName  || !formData.email || !formData.number ) {
+      toast.warn("Please fill out all required fields.")
+      
+      return;
+    }
     submit(formData);
-    // You can reset the form fields after submission, if needed
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setMessage("");
-    setNumber("");
+
+    // Reset form fields after submission
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      number: "",
+      message: "",
+    });
   };
   return (
     <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden">
@@ -172,8 +172,9 @@ const Contact = () => {
                   <div>
                     <label className="sr-only">First Name</label>
                     <input
-                      value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)}
+                    name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
                       type="text"
                       placeholder="First Name"
                       className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
@@ -182,8 +183,9 @@ const Contact = () => {
                   <div>
                     <label className="sr-only">Last Name</label>
                     <input
-                      value={lastName}
-                      onChange={(e) => setLastName(e.target.value)}
+                    name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
                       type="text"
                       placeholder="Last Name"
                       className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
@@ -193,8 +195,9 @@ const Contact = () => {
                 <div>
                   <label className="sr-only">Email</label>
                   <input
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     type="text"
                     placeholder="Email"
                     className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
@@ -203,8 +206,9 @@ const Contact = () => {
                 <div>
                   <label className="sr-only">Phone Number</label>
                   <input
-                    value={number}
-                    onChange={(e) => setNumber(e.target.value)}
+                  name="number"
+                      value={formData.number}
+                      onChange={handleInputChange}
                     type="text"
                     placeholder="Phone Number"
                     className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
@@ -215,8 +219,9 @@ const Contact = () => {
                     Details
                   </label>
                   <textarea
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                  name="message"
+                     value={formData.message}
+                     onChange={handleInputChange}
                     type="text"
                     rows={4}
                     className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-navy-700 dark:border-gray-700 dark:text-gray-400"
@@ -228,7 +233,7 @@ const Contact = () => {
                   onClick={handleFormSubmit}
                   className="inline-flex justify-center items-center gap-x-3 text-center bg-blue-600 hover:bg-blue-700 border border-transparent text-sm lg:text-base text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
                 >
-                  {loading?'loading':' Send Requirement'}
+                  {loading?'Loading...':' Send Requirement'}
                  
                 </button>
               </div>

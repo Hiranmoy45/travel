@@ -39,17 +39,15 @@ export default function AppContextProvider({ children }) {
         if (!response.ok) {
           // Handle the error if the response status is not okay (e.g., 4xx or 5xx)
           const errorData = await response.json();
+          toast.warn('Please Check your email Id', {
+          
+            theme: darkMode ? 'dark' : 'light',
+            });
           throw new Error(errorData.error || 'Failed to send email');
         }
        
         toast.success('Email send successfully', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
+          
           theme: darkMode ? 'dark' : 'light',
           });
         const responseData = await response.json();
