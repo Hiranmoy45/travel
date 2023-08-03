@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 
 
 
-const ClientOnly= ({ 
+const ClientOnly = ({
   children
 }) => {
   const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-      setHasMounted(true);
+    setHasMounted(true);
   }, [])
 
   if (!hasMounted) return null;

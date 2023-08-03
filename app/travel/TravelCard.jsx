@@ -5,34 +5,30 @@ import { toast } from 'react-toastify';
 import { AppContext } from '@/context/AppContext';
 
 const Card = ({id, imageSrc, name, location, rating }) => {
-const {setData} = useContext(AppContext);
+  const { data, setData } = useContext(AppContext);
   const [isDataSaved, setIsDataSaved] = useState(false);
+
   useEffect(() => {
     const existingData = JSON.parse(localStorage.getItem('cards')) || [];
-   
+    setData(existingData);
+
     const specificDataItem = existingData.find(item => item.id === id);
-    setIsDataSaved(specificDataItem);
-  }, [id ,isDataSaved])
+    setIsDataSaved(!!specificDataItem);
+  }, [id]);
+
   const handleCardClick = () => {
-    // Get the existing data from local storage (if any)
-    const existingData = JSON.parse(localStorage.getItem('cards')) || [];
-    const specificDataItem = existingData.find(item => item.id === id);
-    if(!specificDataItem){
-      const newData = [...existingData, { id, imageSrc, name, location, rating }];
-      setIsDataSaved(true);
-        // Save the new data to local storage
-        localStorage.setItem('cards', JSON.stringify(newData));
-        toast.success("added successfully");
-    }else{
-      
-    const filteredData = existingData.filter(item => item.id !== id);
-    localStorage.setItem('cards', JSON.stringify(filteredData));
-      toast.success("removed");
-      setData(filteredData);
-    }
-    // Add the clicked card data to the existing data
-    
+    const specificDataItem = data.find(item => item.id === id);
+    const newData = specificDataItem
+      ? data.filter(item => item.id !== id)
+      : [...data, { id, imageSrc, name, location, rating }];
+
+    setData(newData);
+    setIsDataSaved(!specificDataItem);
+    localStorage.setItem('cards', JSON.stringify(newData));
+
+    toast.success(specificDataItem ? 'Removed' : 'Added successfully');
   };
+
 
 
   return (

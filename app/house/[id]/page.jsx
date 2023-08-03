@@ -1,5 +1,5 @@
-'use client'
-import React ,{useState , useEffect} from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import "../index.css";
 import Link from "next/link";
 
@@ -16,29 +16,26 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import Slider from "./Slider";
-const Page = ({params}) => {
-   
-    console.log(params?.id);
-    const [data, setData] = useState(null);
+const Page = ({ params }) => {
+  console.log(params?.id);
+  const [data, setData] = useState(null);
 
-  
+  // Simulate fetching the data based on the provided ID
+  useEffect(() => {
+    const item = newtravelData.find((item) => item.id == params?.id);
+    setData(item);
+  }, [params?.id]);
 
-    // Simulate fetching the data based on the provided ID
-    useEffect(() => {
-      const item = newtravelData.find((item) => item.id == params?.id);
-      setData(item);
-    }, [params?.id]);
-  
-    if (!data) {
-      return <div>Loading...</div>;
-    }
-    console.log(data);
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+  console.log(data);
   return (
     <>
       <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden house-details">
-
         <div className="house-title ">
-          <h1 className="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">{data.name}
+          <h1 className="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">
+            {data.name}
           </h1>
           <div className="row">
             <div>
@@ -59,30 +56,39 @@ const Page = ({params}) => {
             </div>
           </div>
         </div>
-   
-<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-  {/* Left Side (One Image) */}
-  <div className="md:col-span-1 ">
-    {/* <img src="/images/all/school.webp" alt="Left Image" className="w-full h-auto" />
-     */}
-      <Slider data={data}/>
-  </div>
-  {/* Right Side (Four Images) */}
-  <div className="md:col-span-2 grid grid-cols-2 gap-4 ">
-  {data.imageSrc.slice(1,5).map((data, index) => (
-    <div className="col-span-1" key={index}>
-      <img src={`/images/all/${data}`} alt="Right Image 1" className="w-full h-52 object-cover rounded-lg" />
-    </div>
-  ))}
 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Left Side (One Image) */}
+          <div className="md:col-span-1 ">
+            {/* <img src="/images/all/school.webp" alt="Left Image" className="w-full h-auto" />
+             */}
+            <Slider data={data} />
+          </div>
+          {/* Right Side (Four Images) */}
+          <div className="md:col-span-2 grid grid-cols-2 gap-4 ">
+            {data.imageSrc.slice(1, 5).map((data, index) => (
+              <div className="col-span-1" key={index}>
+                <img
+                  src={`/images/all/${data}`}
+                  alt="Right Image 1"
+                  className="w-full h-52 object-cover rounded-lg"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
 
-  </div>
-</div>
-     
         <div className="small-details">
-          <h2 className="text-xl text-slate-800 dark:text-navy-50">{data.name}</h2>
-          <p className="text-slate-700 dark:text-navy-100">2 guest &nbsp; &nbsp; 2 beds &nbsp; &nbsp; 1 bathroom</p>
-          <h4 className="text-2xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl "> &#x20b9; {data.price}</h4>
+          <h2 className="text-xl text-slate-800 dark:text-navy-50">
+            {data.name}
+          </h2>
+          <p className="text-slate-700 dark:text-navy-100">
+            2 guest &nbsp; &nbsp; 2 beds &nbsp; &nbsp; 1 bathroom
+          </p>
+          <h4 className="text-2xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">
+          
+            &#x20b9; {data.price}
+          </h4>
         </div>
 
         <hr className="line" />
@@ -102,33 +108,29 @@ const Page = ({params}) => {
           <button type="submit">Check Availability</button>
         </form>
         <ul className="details-list">
-        {
-  data.info.map((info, index) => {
-    const parts = info.split(':');
-    const ftag = parts[0];
-    const ltag = parts[1];
+          {data.info.map((info, index) => {
+            const parts = info.split(":");
+            const ftag = parts[0];
+            const ltag = parts[1];
 
-    return (
-      <>
-    
-      <li className="dark:text-white" key={index}>
-           
-            <FontAwesomeIcon icon={faArrowAltCircleRight} className="fa dark:text-white" />
-            <span className="absolute -right-px -top-px flex h-3 w-3 items-center justify-center">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-80" />
-                  <span className="inline-flex h-2 w-2 rounded-full bg-primary" />
-                </span>
-                
-            {ftag}
-            <span>{ltag}</span>
-          </li>
-          </>
-    );
-  })
-}
-         
+            return (
+              <>
+                <li className="dark:text-white" key={index}>
+                  <FontAwesomeIcon
+                    icon={faArrowAltCircleRight}
+                    className="fa dark:text-white"
+                  />
+                  <span className="absolute -right-px -top-px flex h-3 w-3 items-center justify-center">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-80" />
+                    <span className="inline-flex h-2 w-2 rounded-full bg-primary" />
+                  </span>
 
-         
+                  {ftag}
+                  <span>{ltag}</span>
+                </li>
+              </>
+            );
+          })}
         </ul>
         <hr className="line" />
         <p className="home-desc dark:text-white">
@@ -184,7 +186,6 @@ const Page = ({params}) => {
           Contact Host
         </Link>
       </div>
-
     </>
   );
 };
