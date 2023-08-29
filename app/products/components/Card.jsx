@@ -8,7 +8,8 @@ const Card = ({ dataSet }) => {
 <div className="flex lg:w-72 sm:w-full shrink-0 flex-col">
         <img
           className="h-48 w-full rounded-2xl object-cover object-center"
-          src={dataSet.imageUrl}
+          src={`images/all/${dataSet.imageSrc[0]}`}
+
           alt="image"
          
         />
@@ -16,10 +17,10 @@ const Card = ({ dataSet }) => {
           <div className="flex space-x-2">
             <div
               className={`badge rounded-full ${
-                dataSet.badgeType === "lux" ? "bg-warning" : "bg-secondary"
+                dataSet.price>'270' ? "bg-warning" : "bg-secondary"
               } py-1 uppercase text-white`}
             >
-              {dataSet.badgeType}
+              {dataSet.location}
             </div>
             <div className="flex flex-wrap items-center font-inter text-xs uppercase">
               <p>{dataSet.bedCount}</p>

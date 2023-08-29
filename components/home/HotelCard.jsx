@@ -14,7 +14,7 @@ const Hotelcard = ({ dataSet }) => {
           <div className="flex space-x-2">
             <div
               className={`badge rounded-full ${
-                dataSet.price > "10,000" ? "bg-warning" : "bg-secondary"
+                dataSet.price> 270 ? "bg-warning" : "bg-secondary"
               } py-1 uppercase text-white`}
             >
               {dataSet.location }
