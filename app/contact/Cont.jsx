@@ -39,6 +39,8 @@ const IconBlock = ({ icon, title, description, link, linkText }) => (
 );
 
 const Contact = () => {
+
+  
   const iconBlocks = [
     {
       icon: (
@@ -56,7 +58,7 @@ const Contact = () => {
       ),
       title: "Knowledgebase",
       description: "We're here to help with any questions or code.",
-      link: "#",
+      link: "mailto:saptakexterio@gmail.com",
       linkText: "Contact support",
     },
     {
@@ -75,7 +77,7 @@ const Contact = () => {
       ),
       title: "FAQ",
       description: "Search our FAQ for answers to anything you might ask.",
-      link: "#",
+      link: "mailto:saptakexterio@gmail.com",
       linkText: "Visit FAQ",
     },
     {
@@ -92,9 +94,9 @@ const Contact = () => {
           <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z" />
         </svg>
       ),
-      title: "Developer APIs",
+      title: "Call Now",
       description: "Check out our development quickstart guide.",
-      link: "#",
+      link: "tel:123456790",
       linkText: "Contact sales",
     },
     {
@@ -112,8 +114,8 @@ const Contact = () => {
       ),
       title: "Contact us by email",
       description: "If you wish to write us an email instead please use",
-      link: "#",
-      linkText: "examplesite.com",
+      link: "mailto:saptakexterio@gmail.com",
+      linkText: "saptakexterio@gmail.com",
     },
   ];
   const { submit, loading } = useContext(AppContext);

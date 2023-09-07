@@ -45,7 +45,7 @@ const Slider = ({data}) => {
             <div className="swiper-slide" key={index}>
               <img
                 className="h-full w-full object-cover ok"
-                src={`/images/all/${data}`}
+                src={`/images/ProductPhotos/${data}`}
                                 loading="lazy"
                 alt="image"
               />

@@ -8,7 +8,7 @@ const Card = ({ dataSet }) => {
 <div className="flex lg:w-72 sm:w-full shrink-0 flex-col">
         <img
           className="h-48 w-full rounded-2xl object-cover object-center"
-          src={`images/all/${dataSet.imageSrc[0]}`}
+          src={`images/ProductPhotos/${dataSet.imageSrc[0]}`}
 
           alt="image"
          
