@@ -1,7 +1,9 @@
 'use client'
 import { createContext, useState, useEffect, useRef } from "react";
 import contactUsEmail from "@/components/template/contact";
+import Ownermail from "@/components/template/ownermail";
 import { toast } from 'react-toastify';
+
 
 //step1
 export const AppContext = createContext();
@@ -23,11 +25,12 @@ export default function AppContextProvider({ children }) {
       
       const emailData = {
         name: firstName,
-        email: email, // Replace with the recipient's email address
+        email: email,
+         // Replace with the recipient's email address
          // Replace with the actual message
-        template: contactUsEmail(firstName, lastName, email, message ,number),
+        template1: contactUsEmail(firstName, lastName, email, message ,number),
+        template2:Ownermail(firstName, lastName, email, message ,number),
       };
-    
       try {
         const response = await fetch('/api/email', {
           method: 'POST',
@@ -61,13 +64,8 @@ export default function AppContextProvider({ children }) {
     // toast("Wow so easy!")
     // Call the sendEmail function to trigger the POST request
     sendEmail(formData);
-
  }
   //Total Contacts 
-
-
-
-
   //data filling pending
   const value = {
     darkMode, setDarkMode,submit,loading,data, setData,
