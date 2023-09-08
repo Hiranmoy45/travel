@@ -110,7 +110,7 @@ export const newtravelData = [
     id: '12',
     imageSrc:[
       'PLAYGROUNDEQUIPMENTS/1 (1).jpeg',
-      'PLAYGROUNDEQUIPMENTS/1 (1).jpg',
+      'PLAYGROUNDEQUIPMENTS/1 (1).JPG',
       'PLAYGROUNDEQUIPMENTS/1 (2).jpeg',
       'PLAYGROUNDEQUIPMENTS/1 (2).jpg',
       'PLAYGROUNDEQUIPMENTS/1 (3).jpeg',

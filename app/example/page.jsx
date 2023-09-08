@@ -9,7 +9,7 @@ function Page() {
   const slides = [
     {
       id: 1,
-      image: '/images/slide3.jpg',
+      image: '/images/slide3.JPG',
       title: 'Saptak Playground Equipment',
     },
     {
@@ -25,7 +25,7 @@ function Page() {
   
     {
       id: 4,
-      image: '/images/slide4.jpg',
+      image: '/images/slide4.JPG',
       title: 'Saptak Awnings & Pergoluxe',
     },
   ];
