@@ -25,7 +25,9 @@ const Page = () => {
  
       <div className="mt-4 grid grid-cols-1 gap-4 sm:mt-5 sm:grid-cols-2 sm:gap-5 lg:mt-6 lg:gap-6  md:grid-cols-3 xl:grid-cols-4">
       {data.imageSrc.map((image, index) => (
+       
           <TravelCard travelData={image} key={index}/>
+          
         ))}
         
        
