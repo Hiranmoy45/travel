@@ -13,6 +13,7 @@ export default function AppContextProvider({ children }) {
   );
   const [loading,setLoading] =useState(false);
   const [data, setData] = useState([]);
+ 
  const submit=(formData)=>{
   setLoading(true);
     async function sendEmail(formData) {

@@ -16,8 +16,8 @@ import Footer from '@/components/footer/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Travel ',
-  description: 'This is Travel',
+  title: 'Saptak Exterio ',
+  description: 'Saptak Exterio, one of Northeast’s leading most company deals in manufacturer of playground equipment, tensile structure, swimming pool, fountain, Awning, repairing pools, fountain, etc. We Manufacture high quality kids play equipments and gym equipment’s coated with PU and Synthetic Paint. Our Awning are most preferred and prominent awnings. These are designed and manufactured as per latest trends using quality tested raw materials.Our company is engage in designing and fabrication of tensile fabric structure for car parking, walkaway, stadium, swimming pool, badminton court etc, With fabric like Serge Ferrari. Saptak Exterio fountain rejuvenates and brings a touch of elegance to your interior as well as exterior as we have gain expertise in manufacturing both outdoor and indoor fountains. Saptak Exterio is also known for its innovative design and latest technology.',
 };
 
 export default function RootLayout({ children }) {

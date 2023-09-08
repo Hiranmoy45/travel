@@ -18,7 +18,7 @@ import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import Slider from "./Slider";
 import Form from "./components/Form";
 const Page = ({ params }) => {
-  console.log(params?.id);
+  
   const [data, setData] = useState(null);
 
   // Simulate fetching the data based on the provided ID
@@ -30,14 +30,20 @@ const Page = ({ params }) => {
   if (!data) {
     return <div>Loading...</div>;
   }
-  console.log(data);
+ 
   return (
     <>
       <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden house-details">
         <div className="house-title ">
+          <div className="flex items-center justify-between space-x-2 ">
           <h1 className="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">
             {data.name}
           </h1>
+          <div>
+      <Link href={`/gallary/${params?.id}`} className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">All Images</Link>
+    </div>
+    </div>
+
           <div className="row">
             <div>
               <FontAwesomeIcon icon={faStar} className="icon" />

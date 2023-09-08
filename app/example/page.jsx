@@ -2,34 +2,31 @@
 import React, { useState, useEffect } from 'react';
 
 import './index.css';
+import Link from 'next/link';
 
 function Page() {
  
   const slides = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1534009502677-4e5080efa8c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3dpbWluZyUyMHBvb2x8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
-      title: 'Retractable Awning Construction Services',
+      image: '/images/slide3.jpg',
+      title: 'Saptak Playground Equipment',
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM0MTM2fQ&auto=format&fit=crop&w=1600&q=80',
-      title: 'Real Bamboo Wall Clock',
-    },
+      image: '/images/slide1.png',
+      title: 'Water Fountain',
+    },  
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80',
-      title: 'Brown and blue hardbound book',
+      image: 'https://images.pexels.com/photos/261410/pexels-photo-261410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      title: 'Saptak Swimming Pool',
     },
+  
     {
       id: 4,
-      image: 'https://images.pexels.com/photos/14024958/pexels-photo-14024958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Brown and blue hardbound book',
-    },
-    {
-      id: 5,
-      image: 'https://images.pexels.com/photos/261410/pexels-photo-261410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Swimming Pool Water Treatment Construction Services',
+      image: '/images/slide4.jpg',
+      title: 'Saptak Awnings & Pergoluxe',
     },
   ];
 
@@ -91,10 +88,10 @@ const next=()=>{
 
 
 <p className="banner-text">
-  starting at &#x20b9;<b>500</b>.00
+  Get Started
 </p>
 
-<a href="#" className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90">book now</a>
+<Link href="/travel" className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90">book now</Link>
 
 </div>
               </div>

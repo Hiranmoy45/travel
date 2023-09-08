@@ -18,7 +18,7 @@ const Aboutus = () => {
       ),
       title: "Nature of Business",
       description:
-        "The business operates by offering various services to cater to customer needs.(Service Provider)",
+        "Exterior & Interior Designing Company and Manufacturer of Children Play Equipment",
     },
     {
       icon: (
@@ -37,7 +37,7 @@ const Aboutus = () => {
         </svg>
       ),
       title: "Total Employee",
-      description: "The total number of employees is between 11 to 25 people.",
+      description: "The total number of employees is between 20 to 30 people.",
     },
     {
       icon: (
