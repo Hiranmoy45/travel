@@ -96,7 +96,7 @@ const Contact = () => {
       ),
       title: "Call Now",
       description: "Check out our development quickstart guide.",
-      link: "tel:123456790",
+      link: "tel:7896501172 ",
       linkText: "Contact sales",
     },
     {
