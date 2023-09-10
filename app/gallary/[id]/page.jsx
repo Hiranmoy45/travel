@@ -23,7 +23,7 @@ const Page = ({params}) => {
       <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden">
   <div className="flex items-center justify-between space-x-2 py-5">
     <h3 className="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl">
-      Gallary
+      Gallery
     </h3> 
     <div>
       <Link href="/" className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">Back to Home</Link>
