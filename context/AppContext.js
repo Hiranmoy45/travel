@@ -1,7 +1,7 @@
 'use client'
 import { createContext, useState, useEffect, useRef } from "react";
 import contactUsEmail from "@/components/template/contact";
-import Ownermail from "@/components/template/ownermail";
+import Ownermail from "@/components/template/Ownermail";
 import { toast } from 'react-toastify';
 
 
