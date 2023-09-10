@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-
+import Image from 'next/image';
 import './index.css';
 import Link from 'next/link';
 
@@ -16,10 +16,11 @@ function Page() {
       id: 2,
       image: '/images/slide1.png',
       title: 'Water Fountain',
+      
     },  
     {
       id: 3,
-      image: 'https://images.pexels.com/photos/261410/pexels-photo-261410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: '/images/pexels-photo-261410.jpeg',
       title: 'Saptak Swimming Pool',
     },
   
@@ -70,10 +71,13 @@ const next=()=>{
               className={`carousel-item absolute opacity-0 ${currentSlide === slide.id ? 'opacity-100' : ''}`}
               style={{ height: "50vh" }}
             >
-              <div
-                className="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
-                style={{ backgroundImage: `url('${slide.image}')` }}
-              >
+              <div className="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right">
+             <Image
+        src={slide.image}
+        alt={slide.title}
+        width={1920}
+        height={768}
+      />
                 {/* <div className="container mx-auto">
                   <div className="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                     <p className="text-black text-2xl my-4">{slide.title}</p>
