@@ -82,8 +82,7 @@ function Bookingmodel() {
         </div>
         <div className="px-4 py-4 sm:px-5">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-            incidunt
+          If you need help, please visit our Help Center(7896501172).
           </p>
           <div className="mt-4 space-y-4">
             <label className="block">

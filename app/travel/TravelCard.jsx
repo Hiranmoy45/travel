@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { AppContext } from '@/context/AppContext';
 
 const Card = ({id, imageSrc, name, location, rating }) => {
-  const { data, setData } = useContext(AppContext);
+  const { data, setData ,setShowModal1} = useContext(AppContext);
   const [isDataSaved, setIsDataSaved] = useState(false);
 
   useEffect(() => {
@@ -63,6 +63,7 @@ const Card = ({id, imageSrc, name, location, rating }) => {
             </svg>
             <span className="text-xs+">5.0</span>
           </p>
+          <button onClick={()=>setShowModal1(true)} className="btn space-x-2  text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer">Book now</button>
         </div>
       </div>
     </div>

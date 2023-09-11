@@ -1,9 +1,8 @@
 'use client'
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import './index.css';
 import Link from 'next/link';
-import { AppContext } from '@/context/AppContext';
 
 function Page() {
  
@@ -34,7 +33,7 @@ function Page() {
 
 
   const [currentSlide, setCurrentSlide] = useState(1);
-const {setShowModal1 }=useContext(AppContext);
+
   useEffect(() => {
     const interval = setInterval(() => {
       const nextSlide = currentSlide === slides.length ? 1 : currentSlide + 1;
@@ -91,7 +90,7 @@ const next=()=>{
   Get Started
 </p>
 
-<button onClick={()=>setShowModal1(true)} className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer">book now</button>
+<Link href="/travel" className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer">book now</Link>
 
 </div>
               </div>

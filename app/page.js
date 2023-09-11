@@ -5,7 +5,7 @@ import Main from './example/page.jsx'
 import Contact from "./contact/Cont.jsx"
 import AboutUs from "./about/components/Aboutus.jsx"
 import Testimonial from "@/components/testimonial/Testimonial.js"
-import Bookingmodel from "@/components/Modal/Bookingmodel.jsx"
+
 
 
 
@@ -25,8 +25,7 @@ export default function page() {
  <Company/>
  <Testimonial/>
 
-       <Bookingmodel/>
-       
+    
  
  </div>
    </>

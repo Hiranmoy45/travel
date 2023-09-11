@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AppContextProvider from '@/context/AppContext';
 
 import Header from '@/components/header/Header';
-
+import Bookingmodel from "@/components/Modal/Bookingmodel.jsx"
 import { Inter } from 'next/font/google';
 import MobileNav from '@/components/header/MobileNav';
 import Footer from '@/components/footer/Footer';
@@ -51,7 +51,8 @@ export default function RootLayout({ children }) {
               {children}
               <MobileNav/>
               <MobileNav/>
-              
+              <Bookingmodel/>
+       
               <ToastContainer />
             </div>
           </div>

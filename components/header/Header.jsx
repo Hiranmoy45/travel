@@ -47,8 +47,8 @@ const Header = () => {
             <button className="menu-toggle ml-0.5 flex h-7  flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80">
               <Image
               src={`${darkMode?'/images/saptakdark-logo.png':'/images/saptak_logo.png'}`}
-              height={14}
-              width={20}
+              width={500}
+              height={500}
               className="h-14 w-20"
               alt="logo"
               />

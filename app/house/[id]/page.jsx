@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../index.css";
 import Link from "next/link";
 
@@ -17,12 +17,13 @@ import {
 import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import Slider from "./Slider";
 import Form from "./components/Form";
+import { AppContext } from "@/context/AppContext";
 
 
 const Page = ({ params }) => {
   
   const [data, setData] = useState(null);
-
+const {setShowModal1}=useContext(AppContext);
   // Simulate fetching the data based on the provided ID
   useEffect(() => {
     const item = newtravelData.find((item) => item.id == params?.id);
@@ -96,8 +97,7 @@ const Page = ({ params }) => {
             2 guest &nbsp; &nbsp; 2 beds &nbsp; &nbsp; 1 bathroom
           </p>
           <h4 className="text-2xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">
-          
-            &#x20b9; {data.price}
+          <button onClick={()=>setShowModal1(true)} className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer">book now</button>
           </h4>
         </div>
 
