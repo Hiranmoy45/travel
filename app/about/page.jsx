@@ -3,6 +3,8 @@ import Bookingmodel from "@/components/Modal/Bookingmodel";
 import { AppContext } from "@/context/AppContext";
 import Image from "next/image";
 import React, { useContext, useState } from "react";
+import Aboutus from "./components/Aboutus";
+import Link from "next/link";
 
 function App() {
   const { showModal1, setShowModal1 } = useContext(AppContext);
@@ -62,16 +64,17 @@ function App() {
                 Saptak Exterio is also known for its innovative design and
                 latest technology.
               </p>
-              <a
-                href="#"
+              <Link
+                href="/Link"
                 className="px-4 py-2 text-gray-100 bg-blue-500 rounded dark:bg-blue-400 dark:hover:bg-blue-500 hover:bg-blue-600"
               >
-                Learn more
-              </a>
+                Contact Now
+              </Link>
             </div>
           </div>
         </div>
       </section>
+      <Aboutus/> 
     </div>
   );
 }
