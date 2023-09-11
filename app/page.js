@@ -11,7 +11,7 @@ import { useContext } from "react"
 import { AppContext } from "@/context/AppContext.js"
 
 
-export default function page() {
+export default function Page() {
 const {showModal1}=useContext(AppContext);
   return (
    <>
