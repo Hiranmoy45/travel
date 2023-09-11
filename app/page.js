@@ -1,4 +1,4 @@
-'use client'
+
 import Hotel from "@/components/home/Hotel"
 import Travel from "./travel/page.jsx"
 import Company from "@/components/home/Company.jsx"
@@ -11,8 +11,8 @@ import { useContext } from "react"
 import { AppContext } from "@/context/AppContext.js"
 
 
-export default function Page() {
-const {showModal1}=useContext(AppContext);
+export default function page() {
+
   return (
    <>
   
@@ -26,9 +26,9 @@ const {showModal1}=useContext(AppContext);
  
  <Company/>
  <Testimonial/>
- {showModal1 && (
+
        <Bookingmodel/>
-        )}
+       
  
  </div>
    </>
