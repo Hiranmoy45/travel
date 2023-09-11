@@ -15,7 +15,7 @@ export default function AppContextProvider({ children }) {
   );
   const [loading,setLoading] =useState(false);
   const [data, setData] = useState([]);
- 
+  const [showModal1, setShowModal1] = useState(false);
  const submit=(formData)=>{
   setLoading(true);
     async function sendEmail(formData) {
@@ -68,7 +68,7 @@ export default function AppContextProvider({ children }) {
   //Total Contacts 
   //data filling pending
   const value = {
-    darkMode, setDarkMode,submit,loading,data, setData,
+    darkMode, setDarkMode,submit,loading,data, setData,showModal1, setShowModal1
   };
 
   //step2

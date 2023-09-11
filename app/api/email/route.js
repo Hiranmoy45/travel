@@ -23,13 +23,13 @@ export async function POST(request) {
   
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${name} (${email})`,
-    html: template2,
+    html: template1,
   };
 
   // Owner email template
   const ownerMailOptions = {
     from: "saptakexterio@gmail.com",
-    to: 'demoprojectsaptak@gmail.com',
+    to: 'saptakexterio@gmail.com',
   
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${name} (${email})`,

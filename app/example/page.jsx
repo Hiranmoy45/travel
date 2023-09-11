@@ -1,8 +1,9 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Image from 'next/image';
 import './index.css';
 import Link from 'next/link';
+import { AppContext } from '@/context/AppContext';
 
 function Page() {
  
@@ -16,7 +17,7 @@ function Page() {
       id: 2,
       image: '/images/slide1.png',
       title: 'Water Fountain',
-      
+
     },  
     {
       id: 3,
@@ -33,7 +34,7 @@ function Page() {
 
 
   const [currentSlide, setCurrentSlide] = useState(1);
-
+const {setShowModal1 }=useContext(AppContext);
   useEffect(() => {
     const interval = setInterval(() => {
       const nextSlide = currentSlide === slides.length ? 1 : currentSlide + 1;
@@ -78,12 +79,7 @@ const next=()=>{
         width={1920}
         height={768}
       />
-                {/* <div className="container mx-auto">
-                  <div className="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                    <p className="text-black text-2xl my-4">{slide.title}</p>
-                    <a className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
-                  </div>
-                </div> */}
+              
                  <div className="banner-content">
 
 <p className="banner-subtitle text-primary">Trending item</p>
@@ -95,7 +91,7 @@ const next=()=>{
   Get Started
 </p>
 
-<Link href="/travel" className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90">book now</Link>
+<button onClick={()=>setShowModal1(true)} className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer">book now</button>
 
 </div>
               </div>

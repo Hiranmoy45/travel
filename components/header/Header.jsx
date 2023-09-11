@@ -5,6 +5,7 @@ import Rightheaderbutton from "./components/Rightheaderbutton";
 import MiddleHeader from "./components/MiddleHeader";
 import { AppContext } from "@/context/AppContext";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const Header = () => {
@@ -44,7 +45,14 @@ const Header = () => {
           <div className="h-7">
             <Link href="/">
             <button className="menu-toggle ml-0.5 flex h-7  flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80">
-            <img className="h-14 w-20" src={`${darkMode?'images/saptakdark-logo.png':'images/saptak_logo.png'}`} alt=""/>
+              <Image
+              src={`${darkMode?'/images/saptakdark-logo.png':'/images/saptak_logo.png'}`}
+              height={14}
+              width={20}
+              className="h-14 w-20"
+              alt="logo"
+              />
+            {/* <img className="h-14 w-20" src={`${darkMode?'images/saptakdark-logo.png':'images/saptak_logo.png'}`} alt=""/> */}
             </button>
             </Link>
           </div>

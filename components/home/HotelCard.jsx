@@ -1,9 +1,11 @@
+'use client'
+import { AppContext } from "@/context/AppContext";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 
 const Hotelcard = ({ dataSet }) => {
 
-
+const {setShowModal1}=useContext(AppContext);
   return (
     <>
       <div className="flex w-72 shrink-0 flex-col">
@@ -22,24 +24,26 @@ const Hotelcard = ({ dataSet }) => {
             <div className="flex flex-wrap items-center font-inter text-xs uppercase">
               <p>{dataSet.bedCount}</p>
               <div className="mx-2 my-1 w-px self-stretch bg-slate-200 dark:bg-navy-500" />
-              <p>Book Now</p>
+              <button onClick={()=>setShowModal1(true)}>
+              <p className="cursor-pointer">Book Now</p>
+              </button>
             </div>
           </div>
           <div className="mt-2">
-            <a
+            <Link
               href="#"
               className="line-clamp-1 text-sm+ font-medium text-slate-700 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
             >
               {dataSet.hotelName}
-            </a>
+            </Link>
           </div>
           <div className="flex items-end justify-between">
             <p className="mt-2">
               <span className="text-base font-medium text-slate-700 dark:text-navy-100">
-                &#x20b9;{dataSet.price}
+                Enquiry
               </span>
               <span className="text-xs text-slate-400 dark:text-navy-300">
-                /Square Feet
+                Now
               </span>
             </p>
             <p className="flex shrink-0 items-center space-x-1">
