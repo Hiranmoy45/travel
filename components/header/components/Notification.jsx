@@ -74,7 +74,7 @@ const Notification = () => {
               </button>
               </a>
               {/* dekhanor jonno class show & & this is notification model*/}
-              <Notificmodel/>
+              {/* <Notificmodel/> */}
               {/* Right Sidebar Toggle */}
               <Link href="/fabourite">
               <button

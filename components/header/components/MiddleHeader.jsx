@@ -1,10 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 import Ping from "./Ping";
+import { AppContext } from "@/context/AppContext";
+
 const MiddleHeader = () => {
   const [activeTab, setActiveTab] = useState("/");
-
+  const {showModal2, setShowModal2}=useContext(AppContext)
   useEffect(() => {
     const pathName = location.pathname;
     setActiveTab(pathName);
@@ -22,6 +24,7 @@ const MiddleHeader = () => {
           { tab: "/travel", label: "Our Products" },
           { tab: "/about", label: "About Us" },
           { tab: "/contact", label: "Contact Us" },
+          // { tab: "/history", label: "History" },
         ].map((item, index) => (
           <>
             <Link
@@ -40,6 +43,19 @@ const MiddleHeader = () => {
             </Link>
           </>
         ))}
+     <button
+              
+              className={`btn shrink-0 rounded-none border-b-2 px-3.5 py-2.5 relative ${
+                showModal2
+                  ? "border-primary dark:border-accent text-primary dark:text-accent-light"
+                  : "border-transparent block  text-gray-800 dark:text-white hover:text-slate-800 focus:text-slate-800 dark:hover:text-navy-100 dark:focus:text-navy-100"
+              }`}
+              onClick={() => setShowModal2(true)}
+              passHref
+            >
+              History
+              {showModal2 && <Ping />}
+            </button>
       </div>
     </>
   );

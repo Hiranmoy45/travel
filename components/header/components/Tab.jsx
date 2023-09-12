@@ -1,115 +1,123 @@
 'use client'
-import React from 'react';
+import React,{useContext} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit,faImage,faLeaf,faProjectDiagram,faHistory , faInfo, faCalendar } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
+import { AppContext } from '@/context/AppContext';
 
 const tabAll =[
     {
-      "icon": faUserEdit,
+      "id":100,
+      "icon": faHistory,
       "iconColor": "text-secondary",
       "iconBackgroundColor": "bg-secondary/10 dark:bg-secondary-light/15",
-      "title": "User Photo Changed",
-      "description": "John Doe changed his avatar photo"
+      "title": "BagharbariChildren's ",
+      "description": "ParkGuwahati, Assam"
     },
     {
-      "icon": faCalendar,
+      "id":101,
+      "icon": faHistory,
       "iconColor": "text-info",
       "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
-      "title": "Mon, June 14, 2021",
-      "description": "08:00 - 09:00 | Frontend Conf"
+      "title": "CASCADE FOUNTAIN",
+      "description": "SILCHAR, ASSAM"
     },
     {
-      "icon": faImage,
+      "id":102,
+      "icon": faHistory,
       "iconColor": "text-primary",
       "iconBackgroundColor": "bg-primary/10 dark:bg-accent-light/15",
-      "title": "Images Added",
-      "description": "Mores Clarke added new image gallery"
+      "title": "Diphu",
+      "description": "KarbiAnglong"
     },
     {
-      "icon": faLeaf,
+      "id":103,
+      "icon": faHistory,
       "iconColor": "text-success",
       "iconBackgroundColor": "bg-success/10 dark:bg-success/15",
-      "title": "Design Completed",
-      "description": "Robert Nolan completed the design of the CRM application"
+      "title": "Fatashil",
+      "description": ""
     },
     {
-      "icon": faInfo,
+      "id":104,
+      "icon": faHistory,
       "iconColor": "text-info",
       "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
-      "title": "Wed, June 21, 2021",
-      "description": "16:00 - 20:00 | UI/UX Conf"
+      "title": "Mushroom Fn",
+      "description": "Guwahati, Assam"
     },
     {
-      "icon": faProjectDiagram,
+      "id":105,
+      "icon": faHistory,
       "iconColor": "text-warning",
       "iconBackgroundColor": "bg-warning/10 dark:bg-warning/15",
-      "title": "ER Diagram",
-      "description": "Team completed the ER diagram app"
+      "title": "PadumoniParkLakhimpur",
+      "description": "Assam"
     },
     {
-      "icon": faCalendar,
+      "id":106,
+      "icon": faHistory,
       "iconColor":"text-info",
       "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
-      "title": "THU, May 11, 2021",
-      "description": "10:00 - 11:30 | Interview, Konnor Guzman"
+      "title": "Baridua",
+      "description": "Meghalaya USTM"
     },
     {
+      "id":107,
       "icon": faHistory,
       "iconColor": "text-error",
       "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
-      "title": "Weekly Report",
-      "description": "The weekly report was uploaded"
-    }
+      "title": "Dandelion Fountain",
+      "description": "Aizawl , Mizoram"
+    },
+    {
+      "id":108,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "Dispur",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":109,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "Mritunjoy Mandir",
+      "description": "Temple"
+    },
+    {
+      "id":110,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "Mushroom Nozzle Fountain",
+      "description": "Tura, Meghalaya"
+    },
+    {
+      "id":111,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "NLR",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":112,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "PragTower",
+      "description": "Guwahati, Assam"
+    },
   ]
 const tabAlerts =[
-   
-    {
-      "icon": faImage,
-      "iconColor": "text-primary",
-      "iconBackgroundColor": "bg-primary/10 dark:bg-accent-light/15",
-      "title": "Images Added",
-      "description": "Mores Clarke added new image gallery"
-    },
-    {
-      "icon": faLeaf,
-      "iconColor": "text-success",
-      "iconBackgroundColor": "bg-success/10 dark:bg-success/15",
-      "title": "Design Completed",
-      "description": "Robert Nolan completed the design of the CRM application"
-    },
-    {
-      "icon": faInfo,
-      "iconColor": "text-info",
-      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
-      "title": "Wed, June 21, 2021",
-      "description": "16:00 - 20:00 | UI/UX Conf"
-    },
-    {
-      "icon": faProjectDiagram,
-      "iconColor": "text-warning",
-      "iconBackgroundColor": "bg-warning/10 dark:bg-warning/15",
-      "title": "ER Diagram",
-      "description": "Team completed the ER diagram app"
-    },
-    {
-      "icon": faCalendar,
-      "iconColor":"text-info",
-      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
-      "title": "THU, May 11, 2021",
-      "description": "10:00 - 11:30 | Interview, Konnor Guzman"
-    },
-    {
-      "icon": faHistory,
-      "iconColor": "text-error",
-      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
-      "title": "Weekly Report",
-      "description": "The weekly report was uploaded"
-    }
+  
   ]
   
 
 const ExampleComponent = ({activeTab}) => {
-   
+   const {setShowModal2}=useContext(AppContext);
     let items = [];
   if (activeTab === 'tabAll') {
     items = [...tabAll];
@@ -124,8 +132,8 @@ const ExampleComponent = ({activeTab}) => {
           <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${item.iconBackgroundColor}`}>
             <FontAwesomeIcon icon={item.icon} className={`h-4 w-4 ${item.iconColor} `} />
           </div>
-          <div>
-            <p className="font-medium text-slate-600 dark:text-navy-100">{item.title}</p>
+          <div onClick={() => setShowModal2(false)}>
+            <Link href={`/gallary/${item.id}`} className="font-medium text-slate-600 dark:text-navy-100">{item.title}</Link>
             <div className="mt-1 line-clamp-1 text-xs text-slate-400 dark:text-navy-300">{item.description}</div>
           </div>
         </div>

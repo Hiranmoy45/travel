@@ -15,7 +15,7 @@ const TravelCards = ({travelData}) => {
      <div className="card">
      <Image
   className="h-80 w-full rounded-lg object-cover"
-  src={`/images/ProductPhotos/${travelData}`}
+  src={`/images/${travelData}`}
   width={800}
   height={600}
   alt="image"

@@ -10,7 +10,7 @@ const {setShowModal1}=useContext(AppContext);
     <>
       <div className="flex w-72 shrink-0 flex-col">
       <Link href={`house/${dataSet.id}`}>
-        <img src={`images/ProductPhotos/${dataSet.imageSrc[1]}`}  className="h-48 w-full rounded-2xl object-cover object-center" alt="image"  />
+        <img src={`images/${dataSet.imageSrc[1]}`}  className="h-48 w-full rounded-2xl object-cover object-center" alt="image"  />
         </Link>
         <div className="card mx-2 -mt-8 grow rounded-2xl p-3.5">
           <div className="flex space-x-2">

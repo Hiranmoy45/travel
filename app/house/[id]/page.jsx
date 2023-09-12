@@ -80,7 +80,7 @@ const {setShowModal1}=useContext(AppContext);
             {data.imageSrc.slice(1, 5).map((data, index) => (
               <div className="col-span-1" key={index}>
                 <img
-                  src={`/images/ProductPhotos/${data}`}
+                  src={`/images/${data}`}
                   alt="Right Image 1"
                   className="w-full h-52 object-cover rounded-lg"
                 />

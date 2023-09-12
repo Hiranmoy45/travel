@@ -46,15 +46,13 @@ function Bookingmodel() {
 
   return (
     <>
+   
      {showModal1 && (
         <div
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden px-4 py-6 sm:px-5"
       role="dialog"
     >
-      <div
-        className="absolute inset-0 bg-slate-900/60 transition-opacity duration-300"
-        onClick={() => setShowModal1(false)}
-      ></div>
+      
       <div className="relative w-full max-w-lg origin-top rounded-lg bg-white transition-all duration-300 dark:bg-navy-700">
         <div className="flex justify-between rounded-t-lg bg-slate-200 px-4 py-3 dark:bg-navy-800 sm:px-5">
           <h3 className="text-base font-medium text-slate-700 dark:text-navy-100">

@@ -11,6 +11,7 @@ import Bookingmodel from "@/components/Modal/Bookingmodel.jsx"
 import { Inter } from 'next/font/google';
 import MobileNav from '@/components/header/MobileNav';
 import Footer from '@/components/footer/Footer';
+import Notificmodel from '@/components/header/components/Notificmodel';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -52,7 +53,7 @@ export default function RootLayout({ children }) {
               <MobileNav/>
               <MobileNav/>
               <Bookingmodel/>
-       
+              <Notificmodel/>
               <ToastContainer />
             </div>
           </div>
