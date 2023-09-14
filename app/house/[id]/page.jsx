@@ -93,9 +93,7 @@ const {setShowModal1}=useContext(AppContext);
           <h2 className="text-xl text-slate-800 dark:text-navy-50">
             {data.name}
           </h2>
-          <p className="text-slate-700 dark:text-navy-100">
-            2 guest &nbsp; &nbsp; 2 beds &nbsp; &nbsp; 1 bathroom
-          </p>
+          
           <h4 className="text-2xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">
           <button onClick={()=>setShowModal1(true)} className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer">book now</button>
           </h4>
@@ -178,8 +176,8 @@ const {setShowModal1}=useContext(AppContext);
             </p>
           </div>
         </div>
-        <Link href="#" className="contact-host dark:text-white">
-          Contact Host
+        <Link href="/contact" className="contact-host dark:text-white">
+          Contact Now
         </Link>
       </div>
     </>

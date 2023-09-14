@@ -33,6 +33,7 @@ const Card = ({ id, imageSrc, name, location, rating }) => {
   return (
     <div className="card">
       <Link href={`/house/${id}`}>
+       
         <Image
           className="h-80 w-full rounded-lg object-cover"
           src={`/images/${imageSrc[0]}`}
@@ -40,7 +41,10 @@ const Card = ({ id, imageSrc, name, location, rating }) => {
           height={1920}
           width={720}
         />
+       
       </Link>
+      
+      
       <div className="absolute inset-0 flex h-full w-full flex-col justify-between">
         <div className="flex justify-end p-3">
           <button
@@ -72,8 +76,9 @@ const Card = ({ id, imageSrc, name, location, rating }) => {
               {name}
             </Link>
           </div>
-
+     
           <div className="mt-1 flex items-center space-x-3 text-slate-200">
+       
             <p className="flex items-center space-x-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +127,9 @@ const Card = ({ id, imageSrc, name, location, rating }) => {
             </button>
           </div>
         </div>
+     
       </div>
+     
     </div>
   );
 };
