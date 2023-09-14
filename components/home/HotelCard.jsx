@@ -29,23 +29,19 @@ const {setShowModal1}=useContext(AppContext);
               </button>
             </div>
           </div>
-          <div className="mt-2">
-            <Link
-              href="#"
-              className="line-clamp-1 text-sm+ font-medium text-slate-700 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
-            >
-              {dataSet.hotelName}
-            </Link>
-          </div>
+         
           <div className="flex items-end justify-between">
-            <p className="mt-2">
-              <span className="text-base font-medium text-slate-700 dark:text-navy-100">
-                Enquiry
-              </span>
-              <span className="text-xs text-slate-400 dark:text-navy-300">
-                Now
-              </span>
-            </p>
+          <Link href={`/house/${dataSet.id}`}>
+              <p className="mt-2">
+                <span className="text-base font-medium text-slate-700 dark:text-navy-100">
+                  Enquery
+                </span>
+                <span className="text-xs text-slate-400 dark:text-navy-300">                 
+                  Now
+                </span>
+              </p>
+            </Link>
+            
             <p className="flex shrink-0 items-center space-x-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

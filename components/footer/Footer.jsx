@@ -59,7 +59,7 @@ const Footer = () => {
         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
         <ul className="text-gray-500 dark:text-gray-400 font-medium">
           <li className="mb-4">
-            <Link href="https://drive.google.com/file/d/19NmS2RDb1Vxg0YnErzQoISSp2u06LjKq/view?usp=sharing" target="_blank" className="hover:underline">saptak Brochure</Link>
+            <Link href="https://drive.google.com/file/d/19NmS2RDb1Vxg0YnErzQoISSp2u06LjKq/view?usp=sharing" target="_blank" className="hover:underline">Brochure</Link>
           </li>
           <li className="mb-4">
             <Link href="https://drive.google.com/file/d/1e_toWUx2LTXMA4aDd7bEsV0XlJ959uB9/view?usp=sharing" target="_blank" className="hover:underline">Playground</Link>

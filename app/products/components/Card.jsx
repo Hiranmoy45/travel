@@ -1,50 +1,50 @@
-import React from "react";
-
+"use client";
+import Link from "next/link";
+import React, { useContext } from "react";
+import { AppContext } from "@/context/AppContext";
 const Card = ({ dataSet }) => {
+
+  const { showModal1, setShowModal1 } = useContext(AppContext);
   return (
     <>
-    
-
-<div className="flex lg:w-72 sm:w-full shrink-0 flex-col">
+      <div className="flex lg:w-72 sm:w-full shrink-0 flex-col">
+      <Link href={`/house/${dataSet.id}`}>
         <img
           className="h-48 w-full rounded-2xl object-cover object-center"
-          src={`images/ProductPhotos/${dataSet.imageSrc[0]}`}
-
+          src={`images/${dataSet.imageSrc[0]}`}
           alt="image"
-         
         />
+        </Link>
         <div className="card mx-2 -mt-8 grow rounded-2xl p-3.5">
           <div className="flex space-x-2">
             <div
               className={`badge rounded-full ${
-                dataSet.price>'270' ? "bg-warning" : "bg-secondary"
+                dataSet.price > "270" ? "bg-warning" : "bg-secondary"
               } py-1 uppercase text-white`}
             >
               {dataSet.location}
             </div>
-            <div className="flex flex-wrap items-center font-inter text-xs uppercase">
-              <p>{dataSet.bedCount}</p>
-              <div className="mx-2 my-1 w-px self-stretch bg-slate-200 dark:bg-navy-500" />
-              <p>{dataSet.adults} Adult</p>
-            </div>
+          
+            <div className="flex flex-wrap items-center font-inter text-xs uppercase" onClick={()=>setShowModal1(true)}>
+                 
+              <div className="mx-2 my-1 w-px self-stretch bg-slate-200 dark:bg-navy-500 cursor-pointer" />
+              <p className="cursor-pointer">Book Now</p>
+                   </div>  
+                   
           </div>
-          <div className="mt-2">
-            <a
-              href="#"
-              className="line-clamp-1 text-sm+ font-medium text-slate-700 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
-            >
-              {dataSet.hotelName}
-            </a>
-          </div>
+         
           <div className="flex items-end justify-between">
-            <p className="mt-2">
-              <span className="text-base font-medium text-slate-700 dark:text-navy-100">
-                ${dataSet.price}
-              </span>
-              <span className="text-xs text-slate-400 dark:text-navy-300">
-                /day
-              </span>
-            </p>
+            <Link href={`/house/${dataSet.id}`}>
+              <p className="mt-2">
+                <span className="text-base font-medium text-slate-700 dark:text-navy-100">
+                  Enquery
+                </span>
+                <span className="text-xs text-slate-400 dark:text-navy-300">
+                 
+                  Now
+                </span>
+              </p>
+            </Link>
             <p className="flex shrink-0 items-center space-x-1">
               <svg
                 xmlns="http:www.w3.org/2000/svg"

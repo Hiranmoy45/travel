@@ -23,7 +23,7 @@ function App() {
                   width={1920}
                   height={720}
                 />
-                <div className="absolute bottom-0 right-0 z-10 p-8 bg-white border-4 border-blue-500 rounded shadow dark:border-blue-400 lg:-mb-8 lg:-mr-11 sm:p-8 dark:text-gray-300 dark:bg-gray-800 ">
+                {/* <div className="absolute bottom-0 right-0 z-10 p-8 bg-white border-4 border-blue-500 rounded shadow dark:border-blue-400 lg:-mb-8 lg:-mr-11 sm:p-8 dark:text-gray-300 dark:bg-gray-800 ">
                   <p className="text-lg font-semibold md:w-72">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ function App() {
                     </svg>{" "}
                     Successfully Providing business solutions from 25 years
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="w-full px-6 mb-10 lg:w-1/2 lg:mb-0 ">
@@ -65,7 +65,7 @@ function App() {
                 latest technology.
               </p>
               <Link
-                href="/Link"
+                href="/contact"
                 className="px-4 py-2 text-gray-100 bg-blue-500 rounded dark:bg-blue-400 dark:hover:bg-blue-500 hover:bg-blue-600"
               >
                 Contact Now

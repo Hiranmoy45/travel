@@ -94,7 +94,7 @@ export const newtravelData = [
     location: 'Guwahati',
     desc: 'Saptak Awnings & Pergoluxe for windows, terrace, balconies, restaurants,  farmhouses, etc. Our awning contains corrosion, resistance material, which  helps to retain the shine for several years even with minimum maintenance. They are constructed with a variety of materials for example aluminum acrylic, polyester, vinyl, etc, structured on the metallic framework for support. ',
       price: '270',
-    rating: '4.5',
+    rating: '5.0',
   },
   {
     id: '6',
@@ -104,7 +104,7 @@ export const newtravelData = [
     location: 'Guwahati',
     desc:'Saptak Fountains being one in the list of best fountain manufactures has also gained expertise in manufacturing both indoor and outdoor static fountains, which are generally installed by experience engineers with added varieties of nozzles and fountain lights as per the requirement of our clients considering beautification with creativity. Enriched with the team of skiled and creative experts, we are providing a faultless spectrum of Static Water Fountain is perfect for the balcony, garden, front entrance and backyard and porch areas.  ',
     price: '24,000',
-    rating: '4.5',
+    rating: '5.0',
   },
   {
     id: '12',
@@ -250,7 +250,7 @@ export const newtravelData = [
     location: 'Guwahati',
     desc:'Saptak Playground Equipment - We continuously provide bigger and more fun play experiments for children across the country with our high-quality, commercial-grade playground equipment. Our motto is "Big on play....Low on price" which guides us every day and helps us focus on our goal of providing affordable and durable children playground equipments for sale at great prices. We deal in FRP, LLDP   Plastic, Powder coated and PU coated material. ',
     price: '35,000',
-    rating: '4.5',
+    rating: '5.0',
   },
   {
     id: '10',
@@ -284,7 +284,8 @@ export const newtravelData = [
     location: 'Guwahati',
     desc:'Saptak Swimming Pool is a true extension of its owner personality, whether they entertain friends or associates, throw parties or just have family together. Our pool combines innovative design with of maintenance fee quality. The latest technology. The greatest years durability. The most complete palette of shapes and sizes and options that are backed by a 10 years warranty. ',
     price: '450',
-    rating: '4.5',
+    rating: '5.0',
+
   },
   {
     id: '9',
@@ -320,7 +321,8 @@ export const newtravelData = [
     location: 'Guwahati',
     desc:'Saptak Tensile membrane structure is most often used as a roof as they can economically and attractively span large distances. Tensile membrane structures may also be used as complete buildings, with a few common applications being sports facilities, warehousing and storage buildings, and exhibition venues. ',
     price: '450',
-    rating: '4.5',
+    rating: '5.0',
+
   },
   
 ];

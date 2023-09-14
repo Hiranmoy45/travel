@@ -44,7 +44,7 @@ const Company = () => {
         {/* Title */}
         <div className="sm:w-1/2 xl:w-1/3 mx-auto text-center mb-6 md:mb-12">
           <h2 className="text-xl font-semibold md:text-2xl md:leading-tight text-gray-800 dark:text-gray-200">
-            Trusted by Open Source, enterprise, and more than 99,000 of you
+          Our Happy Clients
           </h2>
         </div>
         {/* End Title */}

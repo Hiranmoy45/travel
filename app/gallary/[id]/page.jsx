@@ -15,6 +15,7 @@ const Page = ({params}) => {
     if(params?.id<100){
     const item = newtravelData.find((item) => item.id == params?.id);
     setData(item);
+    setLoading(false);
   }else{
     const item = images.find((item) => item.id == params?.id);
     setData(item);
