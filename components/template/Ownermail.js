@@ -75,14 +75,14 @@ export default function Ownermail(firstName, lastName, email, message ,number){
                 <p>From ${firstName} ${lastName} ,</p>
                
                 <p>Here are the details provided by sender:</p>
-                <p>Name: ${firstName} ${lastName} }</p>
+                <p>Name: ${firstName} ${lastName} </p>
                 <p>Email: ${email}</p>
                 <p>Phone Number:${number}</p>
                 <p>Message: ${message}</p>
                 
             </div>
             <div class="support">If you have any further questions or need immediate assistance, please feel free to reach
-                out to us at <a href="mailto:info@studynotion.com">info@studynotion.com</a>. We are here to help!</div>
+                out to us at <a href="mailto:saptakexterio.com">saptakexterio.com</a>. We are here to help!</div>
         </div>
     </body>
     

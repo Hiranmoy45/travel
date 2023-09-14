@@ -76,14 +76,14 @@ export default function contactUsEmail(firstName, lastName, email, message ,numb
                 <p>Thank you for contacting us. We have received your message and will respond to you as soon as possible.
                 </p>
                 <p>Here are the details you provided:</p>
-                <p>Name: ${firstName} ${lastName} }</p>
+                <p>Name: ${firstName} ${lastName}</p>
                 <p>Email: ${email}</p>
                 <p>Phone Number:${number}</p>
                 <p>Message: ${message}</p>
                 <p>We appreciate your interest and will get back to you shortly. </p>
             </div>
             <div class="support">If you have any further questions or need immediate assistance, please feel free to reach
-                out to us at <a href="mailto:info@studynotion.com">info@studynotion.com</a>. We are here to help!</div>
+                out to us at <a href="mailto:saptakexterio.com">saptakexterio.com</a>. We are here to help!</div>
         </div>
     </body>
     
