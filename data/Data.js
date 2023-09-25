@@ -609,15 +609,15 @@ export const testimonialData = [
       id: '113',
       imageSrc:[
         
-        'Our_Founation_clients/(JORHAT)/1 (1).jpeg',
-        'Our_Founation_clients/(JORHAT)/1 (2).jpeg',
-        'Our_Founation_clients/(JORHAT)/1 (3).jpeg',
-        'Our_Founation_clients/(JORHAT)/1 (4).jpeg',
-        'Our_Founation_clients/(JORHAT)/1 (5).jpeg',
-        'Our_Founation_clients/(JORHAT)/1 (6).jpeg',
-        'Our_Founation_clients/(JORHAT)/1 (7).jpeg',
-        'Our_Founation_clients/(JORHAT)/1 (8).jpeg',
-        'Our_Founation_clients/(JORHAT)/1 (9).jpeg',
+        'Our_Swimming_Pool_clients/(JORHAT)/1 (1).jpeg',
+        'Our_Swimming_Pool_clients/(JORHAT)/1 (2).jpeg',
+        'Our_Swimming_Pool_clients/(JORHAT)/1 (3).jpeg',
+        'Our_Swimming_Pool_clients/(JORHAT)/1 (4).jpeg',
+        'Our_Swimming_Pool_clients/(JORHAT)/1 (5).jpeg',
+        'Our_Swimming_Pool_clients/(JORHAT)/1 (6).jpeg',
+        'Our_Swimming_Pool_clients/(JORHAT)/1 (7).jpeg',
+        'Our_Swimming_Pool_clients/(JORHAT)/1 (8).jpeg',
+        'Our_Swimming_Pool_clients/(JORHAT)/1 (9).jpeg',
             
       ],
     },
@@ -625,7 +625,7 @@ export const testimonialData = [
       id: '114',
       imageSrc:  [
         '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (1).jpeg',
-        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (1).jpg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (1).jpeg',
         '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (2).jpeg',
         '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (3).jpeg',
         '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (4).jpeg',
