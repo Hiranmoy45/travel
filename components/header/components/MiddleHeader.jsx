@@ -24,7 +24,7 @@ const MiddleHeader = () => {
           { tab: "/travel", label: "Our Products" },
           { tab: "/about", label: "About Us" },
           { tab: "/contact", label: "Contact Us" },
-          // { tab: "/history", label: "History" },
+          { tab: "/history", label: "History" },
         ].map((item, index) => (
           <>
             <Link
@@ -43,7 +43,7 @@ const MiddleHeader = () => {
             </Link>
           </>
         ))}
-     <button
+     {/* <button
               
               className={`btn shrink-0 rounded-none border-b-2 px-3.5 py-2.5 relative ${
                 showModal2
@@ -55,7 +55,7 @@ const MiddleHeader = () => {
             >
               History
               {showModal2 && <Ping />}
-            </button>
+            </button> */}
       </div>
     </>
   );

@@ -4,11 +4,16 @@ import TravelCard from './TravelCard';
 import { newtravelData } from '@/data/Data';
 import Link from 'next/link';
 import { AppContext } from '@/context/AppContext';
+import { useRouter } from 'next/router';
 
 const Page = () => {
   const [loading, setLoading] = useState(false);
   const {data} = useContext(AppContext);
- 
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.back();
+  };
   return (
   <>
       <div className="main-content w-full px-[var(--margin-x)] pb-8 overflow-hidden">
@@ -17,7 +22,7 @@ const Page = () => {
       Our Products
     </h3> 
     <div>
-      <Link href="/" className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">Back to Home</Link>
+      <button className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70" onClick={handleClick} >Back to Home</button>
     </div>
   </div>
   <div className="grid gap-4 sm:gap-5 lg:gap-6">

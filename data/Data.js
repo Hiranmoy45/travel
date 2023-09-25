@@ -1,3 +1,4 @@
+import {faHistory} from '@fortawesome/free-solid-svg-icons';
 export const travelData = [
   {
     "id": 1,
@@ -604,4 +605,449 @@ export const testimonialData = [
         
       ],
     },
+    {
+      id: '113',
+      imageSrc:[
+        
+        'Our_Founation_clients/(JORHAT)/1 (1).jpeg',
+        'Our_Founation_clients/(JORHAT)/1 (2).jpeg',
+        'Our_Founation_clients/(JORHAT)/1 (3).jpeg',
+        'Our_Founation_clients/(JORHAT)/1 (4).jpeg',
+        'Our_Founation_clients/(JORHAT)/1 (5).jpeg',
+        'Our_Founation_clients/(JORHAT)/1 (6).jpeg',
+        'Our_Founation_clients/(JORHAT)/1 (7).jpeg',
+        'Our_Founation_clients/(JORHAT)/1 (8).jpeg',
+        'Our_Founation_clients/(JORHAT)/1 (9).jpeg',
+            
+      ],
+    },
+    {
+      id: '114',
+      imageSrc:  [
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (1).jpg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (2).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (3).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (4).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (5).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (6).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (7).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (8).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (9).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (10).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (11).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (12).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (13).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (14).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (15).jpeg',
+        '/Our_Swimming_Pool_clients/Aizawl,Mizoram/1 (16).jpeg',
+        
+      ],
+    },
+    {
+      id: '115',
+      imageSrc:  [
+        '/Our_Swimming_Pool_clients/Greenwood hotel/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/Greenwood hotel/1 (1).jpeg',
+        
+      ],
+    },
+    {
+      id: '116',
+      imageSrc:  [
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (1).jpg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (2).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (3).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (4).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (5).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (6).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (7).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (8).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (9).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (10).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (11).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (12).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (13).jpeg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (14).jpeg',
+       
+        
+      ],
+    },
+    {
+      id: '117',
+      imageSrc:  [
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (2).jpeg',
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (3).jpeg',
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (4).jpeg',
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (5).jpeg',
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (6).jpeg',
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (7).jpeg',
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (8).jpeg',
+        '/Our_Swimming_Pool_clients/Itanagar,Arunachal Pradesh/1 (9).jpeg',
+      
+        
+      ],
+    },
+    {
+      id: '118',
+      imageSrc:  [
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (2).jpeg',
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (3).jpeg',
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (4).jpeg',
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (5).jpeg',
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (6).jpeg',
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (7).jpeg',
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (8).jpeg',
+        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (9).jpeg',
+      
+        
+      ],
+    },
+    {
+      id: '119',
+      imageSrc:  [
+        '/Our_Swimming_Pool_clients/shillong ,meghalaya/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/shillong ,meghalaya/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/shillong ,meghalaya/1 (2).jpeg',
+        '/Our_Swimming_Pool_clients/shillong ,meghalaya/1 (3).jpeg',
+        '/Our_Swimming_Pool_clients/shillong ,meghalaya/1 (4).jpeg',
+        '/Our_Swimming_Pool_clients/shillong ,meghalaya/1 (5).jpeg',
+        '/Our_Swimming_Pool_clients/shillong ,meghalaya/1 (6).jpeg',
+        '/Our_Swimming_Pool_clients/shillong ,meghalaya/1 (7).jpeg',
+        '/Our_Swimming_Pool_clients/shillong ,meghalaya/1 (8).jpeg',
+        
+      
+        
+      ],
+    },
+    {
+      id: '120',
+      imageSrc:  [
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (2).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (3).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (4).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (5).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (6).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (7).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (8).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (9).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (10).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (11).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (12).jpeg',
+        '/Our_Swimming_Pool_clients/shillong meghalaya,Resort (Emika)/1 (13).jpeg',      
+        
+      ],
+    },
+    {
+      id: '121',
+      imageSrc:  [
+        '/Our_Swimming_Pool_clients/Tura,meghaya/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/Tura,meghaya/1 (1).jpeg',
+        '/Our_Swimming_Pool_clients/Tura,meghaya/1 (2).jpeg',
+        '/Our_Swimming_Pool_clients/Tura,meghaya/1 (3).jpeg',
+        '/Our_Swimming_Pool_clients/Tura,meghaya/1 (4).jpeg',
+        
+      
+        
+      ],
+    },
   ];
+
+
+ export const Founation =[
+    {
+      "id": 100,
+      "icon": faHistory,
+      "iconColor": "text-secondary",
+      "iconBackgroundColor": "bg-secondary/10 dark:bg-secondary-light/15",
+      "title": "BagharbariChildren's ",
+      "description": "ParkGuwahati, Assam"
+    },
+    {
+      "id":101,
+      "icon": faHistory,
+      "iconColor": "text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "CASCADE FOUNTAIN",
+      "description": "SILCHAR, ASSAM"
+    },
+    {
+      "id":102,
+      "icon": faHistory,
+      "iconColor": "text-primary",
+      "iconBackgroundColor": "bg-primary/10 dark:bg-accent-light/15",
+      "title": "Diphu",
+      "description": "KarbiAnglong"
+    },
+    {
+      "id":103,
+      "icon": faHistory,
+      "iconColor": "text-success",
+      "iconBackgroundColor": "bg-success/10 dark:bg-success/15",
+      "title": "Fatashil",
+      "description": ""
+    },
+    {
+      "id":104,
+      "icon": faHistory,
+      "iconColor": "text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Mushroom Fn",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":105,
+      "icon": faHistory,
+      "iconColor": "text-warning",
+      "iconBackgroundColor": "bg-warning/10 dark:bg-warning/15",
+      "title": "PadumoniParkLakhimpur",
+      "description": "Assam"
+    },
+    {
+      "id":106,
+      "icon": faHistory,
+      "iconColor":"text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Baridua",
+      "description": "Meghalaya USTM"
+    },
+    {
+      "id":107,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "Dandelion Fountain",
+      "description": "Aizawl , Mizoram"
+    },
+    {
+      "id":108,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "Dispur",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":109,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "Mritunjoy Mandir",
+      "description": "Temple"
+    },
+    {
+      "id":110,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "Mushroom Nozzle Fountain",
+      "description": "Tura, Meghalaya"
+    },
+    {
+      "id":111,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "NLR",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":112,
+      "icon": faHistory,
+      "iconColor": "text-error",
+      "iconBackgroundColor": "bg-error/10 dark:bg-error/15",
+      "title": "PragTower",
+      "description": "Guwahati, Assam"
+    },
+  ]
+ export const SwimmingPool =[
+    {
+      "id":113,
+      "icon": faHistory,
+      "iconColor": "text-secondary",
+      "iconBackgroundColor": "bg-secondary/10 dark:bg-secondary-light/15",
+      "title": "(JORHAT) ",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":114,
+      "icon": faHistory,
+      "iconColor": "text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Aizawl",
+      "description": "Mizoram"
+    },
+    {
+      "id":115,
+      "icon": faHistory,
+      "iconColor": "text-primary",
+      "iconBackgroundColor": "bg-primary/10 dark:bg-accent-light/15",
+      "title": "Greenwood hotel",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":116,
+      "icon": faHistory,
+      "iconColor": "text-success",
+      "iconBackgroundColor": "bg-success/10 dark:bg-success/15",
+      "title": "Hotel Borail View Regency",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":117,
+      "icon": faHistory,
+      "iconColor": "text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Itanagar",
+      "description": "Arunachal Pradesh"
+    },
+    {
+      "id":118,
+      "icon": faHistory,
+      "iconColor": "text-warning",
+      "iconBackgroundColor": "bg-warning/10 dark:bg-warning/15",
+      "title": "Kahilipara",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":119,
+      "icon": faHistory,
+      "iconColor":"text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Shilong",
+      "description": "Meghalaya"
+    },
+    {
+      "id":120,
+      "icon": faHistory,
+      "iconColor": "text-secondary",
+      "iconBackgroundColor": "bg-secondary/10 dark:bg-secondary-light/15",
+      "title": "Resort(Emika)",
+      "description": "Shillong, Meghalaya"
+    },
+    {
+      "id":121,
+      "icon": faHistory,
+      "iconColor": "text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Tura",
+      "description": "Meghalaya"
+    },
+    
+  ]
+ export const Playground =[
+    {
+      "id":122,
+      "icon": faHistory,
+      "iconColor": "text-secondary",
+      "iconBackgroundColor": "bg-secondary/10 dark:bg-secondary-light/15",
+      "title": "Nehru park ",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":123,
+      "icon": faHistory,
+      "iconColor": "text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Protect Associate",
+      "description": ""
+    },
+   
+  ]  
+ export const Tensile =[
+    {
+      "id":124,
+      "icon": faHistory,
+      "iconColor": "text-secondary",
+      "iconBackgroundColor": "bg-secondary/10 dark:bg-secondary-light/15",
+      "title": "Aarianwoods Resort ",
+      "description": ""
+    },
+    {
+      "id":125,
+      "icon": faHistory,
+      "iconColor": "text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Army Camp",
+      "description": "Tezpur, Assam"
+    },
+    {
+      "id":126,
+      "icon": faHistory,
+      "iconColor": "text-primary",
+      "iconBackgroundColor": "bg-primary/10 dark:bg-accent-light/15",
+      "title": "Barasapara Cricket Stadium",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "id":127,
+      "icon": faHistory,
+      "iconColor": "text-success",
+      "iconBackgroundColor": "bg-success/10 dark:bg-success/15",
+      "title": "Cantilever Structure",
+      "description": "Imphal, Manipur"
+    },
+    {
+      "id":128,
+      "icon": faHistory,
+      "iconColor": "text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Dome Structure",
+      "description": "Imphal, Manipur"
+    },
+    {
+      "id":129,
+      "icon": faHistory,
+      "iconColor": "text-warning",
+      "iconBackgroundColor": "bg-warning/10 dark:bg-warning/15",
+      "title": "Hotel Ornate",
+      "description": "Dr.B BaruahRoad, Guwahati"
+    },
+    {
+      "id":130,
+      "icon": faHistory,
+      "iconColor":"text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Northfield School",
+      "description": ""
+    },
+    {
+      "id":131,
+      "icon": faHistory,
+      "iconColor": "text-secondary",
+      "iconBackgroundColor": "bg-secondary/10 dark:bg-secondary-light/15",
+      "title": "Repose(Baker's Special)",
+      "description": ""
+    },
+    {
+      "id":132,
+      "icon": faHistory,
+      "iconColor": "text-info",
+      "iconBackgroundColor": "bg-info/10 dark:bg-info/15",
+      "title": "Stadium Cantilever Tensile Structure",
+      "description": ""
+    },
+    {
+      "id":133,
+      "icon": faHistory,
+      "iconColor": "text-primary",
+      "iconBackgroundColor": "bg-primary/10 dark:bg-accent-light/15",
+      "title": "UttarayanVilla Kahilapara",
+      "description": "Guwahati"
+    },
+    {
+      "id":134,
+      "icon": faHistory,
+      "iconColor": "text-success",
+      "iconBackgroundColor": "bg-success/10 dark:bg-success/15",
+      "title": "Vandya International School",
+      "description": "Guwahati, Assam"
+    }, 
+  ]
