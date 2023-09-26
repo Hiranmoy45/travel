@@ -6,10 +6,7 @@ import Image from 'next/image';
 
 
 const TravelCards = ({travelData}) => {
-  // Sample data for travel cards
- console.log(travelData);
   
-
   return (
     <>
      <div className="card">

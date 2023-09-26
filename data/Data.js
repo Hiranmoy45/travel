@@ -656,7 +656,7 @@ export const testimonialData = [
       id: '116',
       imageSrc:  [
         '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (1).jpeg',
-        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (1).jpg',
+        '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (1).jpeg',
         '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (2).jpeg',
         '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (3).jpeg',
         '/Our_Swimming_Pool_clients/Hotel Borail View Regency/1 (4).jpeg',
@@ -703,7 +703,7 @@ export const testimonialData = [
         '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (6).jpeg',
         '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (7).jpeg',
         '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (8).jpeg',
-        '/Our_Swimming_Pool_clients/kahilipara,ghy/1 (9).jpeg',
+       
       
         
       ],
@@ -758,6 +758,200 @@ export const testimonialData = [
         
       ],
     },
+    {
+      id: '122',
+      imageSrc:  [
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (1).jpg',
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (2).jpg',
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (3).jpg',
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (4).jpg',
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (5).jpg',
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (6).jpg',
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (7).jpg',
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (8).jpg',
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (9).jpg',
+        '/Our_Playground_Clients/Nehru park ,Guwahati/1 (10).jpg',        
+        
+      ],
+    },
+    {
+      id: '123',
+      imageSrc:  [
+        '/Our_Playground_Clients/Protect Associate/1 (1).JPG',
+        '/Our_Playground_Clients/Protect Associate/1 (2).JPG',
+        '/Our_Playground_Clients/Protect Associate/1 (3).JPG',
+        '/Our_Playground_Clients/Protect Associate/1 (4).JPG',
+        '/Our_Playground_Clients/Protect Associate/1 (5).JPG',
+        '/Our_Playground_Clients/Protect Associate/1 (6).JPG',
+        '/Our_Playground_Clients/Protect Associate/1 (7).JPG',
+        '/Our_Playground_Clients/Protect Associate/1 (8).JPG',
+        '/Our_Playground_Clients/Protect Associate/1 (9).JPG',
+             
+        
+      ],
+    },
+    {
+      id: '124',
+      imageSrc:  [        
+        '/Our_Tensile_Clients/Aarianwoods_Resort/1 (1).jpg',
+        '/Our_Tensile_Clients/Aarianwoods_Resort/1 (2).jpg',
+        '/Our_Tensile_Clients/Aarianwoods_Resort/1 (3).jpg',
+        '/Our_Tensile_Clients/Aarianwoods_Resort/1 (4).jpg',
+        
+             
+        
+      ],
+    },
+    {
+      id: '125',
+      imageSrc:  [        
+        '/Our_Tensile_Clients/Army_Camp -Tezpur_Assam/1.jpeg',                  
+        
+      ],
+    },
+    {
+      id: '126',
+      imageSrc:  [
+        
+        '/Our_Tensile_Clients/Barsapara_Cricket_Stadium_Guwahati_Assam/1 (1).jpeg',
+        '/Our_Tensile_Clients/Barsapara_Cricket_Stadium_Guwahati_Assam/1 (2).jpeg',
+        '/Our_Tensile_Clients/Barsapara_Cricket_Stadium_Guwahati_Assam/1 (3).jpeg',
+        '/Our_Tensile_Clients/Barsapara_Cricket_Stadium_Guwahati_Assam/1 (4).jpeg',
+        '/Our_Tensile_Clients/Barsapara_Cricket_Stadium_Guwahati_Assam/1 (5).jpeg',
+        '/Our_Tensile_Clients/Barsapara_Cricket_Stadium_Guwahati_Assam/1 (6).jpeg',
+        '/Our_Tensile_Clients/Barsapara_Cricket_Stadium_Guwahati_Assam/1 (7).jpeg',
+        '/Our_Tensile_Clients/Barsapara_Cricket_Stadium_Guwahati_Assam/1 (8).jpeg',
+       
+             
+        
+      ],
+    },
+    {
+      id: '127',
+      imageSrc:  [
+        
+        '/Our_Tensile_Clients/Cantilever Strucrure ,Imphal,Manipur/1 (1).jpeg',
+        '/Our_Tensile_Clients/Cantilever Strucrure ,Imphal,Manipur/1 (2).jpeg',
+        '/Our_Tensile_Clients/Cantilever Strucrure ,Imphal,Manipur/1 (3).jpeg',
+        '/Our_Tensile_Clients/Cantilever Strucrure ,Imphal,Manipur/1 (4).jpeg',
+        '/Our_Tensile_Clients/Cantilever Strucrure ,Imphal,Manipur/1 (5).jpeg',
+        '/Our_Tensile_Clients/Cantilever Strucrure ,Imphal,Manipur/1 (6).jpeg',
+        '/Our_Tensile_Clients/Cantilever Strucrure ,Imphal,Manipur/1 (7).jpeg',
+        '/Our_Tensile_Clients/Cantilever Strucrure ,Imphal,Manipur/1 (8).jpeg',
+       
+             
+        
+      ],
+    },
+    {
+      id: '128',
+      imageSrc:  [
+        
+        '/Our_Tensile_Clients/Dome Structure,Imphal Manipur/1 (1).jpeg',
+        '/Our_Tensile_Clients/Dome Structure,Imphal Manipur/1 (2).jpeg',
+        '/Our_Tensile_Clients/Dome Structure,Imphal Manipur/1 (3).jpeg',
+        '/Our_Tensile_Clients/Dome Structure,Imphal Manipur/1 (4).jpeg',
+        '/Our_Tensile_Clients/Dome Structure,Imphal Manipur/1 (5).jpeg',
+        '/Our_Tensile_Clients/Dome Structure,Imphal Manipur/1 (6).jpeg',
+        '/Our_Tensile_Clients/Dome Structure,Imphal Manipur/1 (7).jpeg',
+       
+       
+             
+        
+      ],
+    },
+    {
+      id: '129',
+      imageSrc:  [
+        
+        '/Our_Tensile_Clients/Hotel Ornate,Dr.B BaruahRoad, Guwahati/1 (1).jpeg',
+        '/Our_Tensile_Clients/Hotel Ornate,Dr.B BaruahRoad, Guwahati/1 (2).jpeg',
+        '/Our_Tensile_Clients/Hotel Ornate,Dr.B BaruahRoad, Guwahati/1 (3).jpeg',
+        '/Our_Tensile_Clients/Hotel Ornate,Dr.B BaruahRoad, Guwahati/1 (4).jpeg',
+        '/Our_Tensile_Clients/Hotel Ornate,Dr.B BaruahRoad, Guwahati/1 (5).jpeg',
+       
+       
+       
+             
+        
+      ],
+    },
+    {
+      id: '130',
+      imageSrc:  [
+        
+        '/Our_Tensile_Clients/Northfield school/1 (1).jpeg',
+        '/Our_Tensile_Clients/Northfield school/1 (2).jpeg',
+            
+       
+       
+             
+        
+      ],
+    },
+    {
+      id: '131',
+      imageSrc:  [
+        
+        '/Our_Tensile_Clients/Repose (Baker’s Special)/1 (1).jpeg',
+        '/Our_Tensile_Clients/Repose (Baker’s Special)/1 (2).jpeg',
+            
+       
+       
+             
+        
+      ],
+    },
+    {
+      id: '132',
+      imageSrc:  [
+        
+        '/Our_Tensile_Clients/Stadium Cantilever Tensile Structure/1 (1).jpg',
+        '/Our_Tensile_Clients/Stadium Cantilever Tensile Structure/1 (2).jpg',
+        '/Our_Tensile_Clients/Stadium Cantilever Tensile Structure/1 (3).jpg',
+        '/Our_Tensile_Clients/Stadium Cantilever Tensile Structure/1 (4).jpg',
+            
+       
+       
+             
+        
+      ],
+    },
+    {
+      id: '133',
+      imageSrc:  [
+        
+        '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (1).jpg',
+        '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (2).jpeg',
+        '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (3).jpeg',
+        '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (4).jpeg',
+        '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (5).jpeg',
+            
+       
+       
+             
+        
+      ],
+    },
+    {
+      id: '134',
+      imageSrc:  [
+        
+        '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (1).jpg',
+        '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (2).jpeg',
+        '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (3).jpeg',
+        '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (4).jpeg',
+        '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (5).jpeg',
+        '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (6).jpeg',
+        '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (7).jpeg',
+            
+       
+       
+             
+        
+      ],
+    },
+    
   ];
 
 
