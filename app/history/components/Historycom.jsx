@@ -50,7 +50,7 @@ const Historycom = ({sectionsData ,current}) => {
           </div>
                   <div className="ml-3">
                     <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
-                    {section.title}, {section.description}
+                    {section.title}{section.description && ','} {section.description}
                     </h3>
                   </div>
                 </div>
