@@ -12,6 +12,7 @@ import { Inter } from 'next/font/google';
 import MobileNav from '@/components/header/MobileNav';
 import Footer from '@/components/footer/Footer';
 import Notificmodel from '@/components/header/components/Notificmodel';
+import GoogleAnalytics from './GoogleAnalytics';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -29,6 +30,8 @@ export default function RootLayout({ children }) {
       <html lang="en" className=''>
       <head>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.css" />
+      <GoogleAnalytics GA_TRACKING_ID="G-J5Y5DFD9PL" />
+      
       </head>
         <body className={inter.className}>
           {/* enable for min side bar has-min-sidebar ,for sidebar open add is-sidebar-open*/}<ClientOnly>
@@ -60,6 +63,7 @@ export default function RootLayout({ children }) {
         <Footer/>
           </AppContextProvider>
           </ClientOnly>
+          
         </body>
       </html>
     </>
