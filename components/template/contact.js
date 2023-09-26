@@ -82,7 +82,7 @@ export default function contactUsEmail(firstName, lastName, email, message ,numb
                 <p>Message: ${message}</p>
                 <p>We appreciate your interest and will get back to you shortly. </p>
             </div>
-            <div class="support">If you have any further questions or need immediate assistance, please feel free to reach out to us at <a href="mailto:saptakexterio.com">saptakexterio.com</a>. We are here to help!</div>
+            <div class="support">If you have any further questions or need immediate assistance, please feel free to reach out to us at <a href="mailto:saptakexterio@gmail.com">saptakexterio@gmail.com</a>. We are here to help!</div>
         </div>
     </body>
     

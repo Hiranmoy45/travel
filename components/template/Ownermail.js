@@ -82,7 +82,7 @@ export default function Ownermail(firstName, lastName, email, message ,number){
                 
             </div>
             <div class="support">If you have any further questions or need immediate assistance, please feel free to reach
-                out to us at <a href="mailto:saptakexterio.com">saptakexterio.com</a>. We are here to help!</div>
+                out to us at <a href="mailto:saptakexterio@gmail.com">saptakexterio@gmail.com</a>. We are here to help!</div>
         </div>
     </body>
     
