@@ -921,7 +921,7 @@ export const testimonialData = [
       id: '133',
       imageSrc:  [
         
-        '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (1).jpg',
+        '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (1).jpeg',
         '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (2).jpeg',
         '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (3).jpeg',
         '/Our_Tensile_Clients/UttarayanVilla Kahilapara,Guwahati/1 (4).jpeg',
@@ -937,7 +937,7 @@ export const testimonialData = [
       id: '134',
       imageSrc:  [
         
-        '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (1).jpg',
+        '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (1).jpeg',
         '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (2).jpeg',
         '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (3).jpeg',
         '/Our_Tensile_Clients/Vandya International School,Ghy assam/1 (4).jpeg',
