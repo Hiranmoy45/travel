@@ -31,7 +31,7 @@ const Card = ({ id, imageSrc, name, location, rating }) => {
   };
 
   return (
-    <div className="card">
+    <div className="card" id="products">
       <Link href={`/house/${id}`}>
        
         <Image

@@ -1,5 +1,5 @@
 'use client'
-import React,{useState , useEffect, useContext} from 'react'
+import React,{useState , useEffect} from 'react'
 import TravelCard from '../TravelCard';
 import { newtravelData ,images} from '@/data/Data';
 import Link from 'next/link';
