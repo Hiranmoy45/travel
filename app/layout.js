@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
         <Footer/>
           </AppContextProvider>
           </ClientOnly>
-          <script src="./node_modules/preline/dist/preline.js"></script>
+          {/* <script src="./node_modules/preline/dist/preline.js"></script> */}
 
         </body>
       </html>
