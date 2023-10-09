@@ -15,12 +15,12 @@ const Hotel = () => {
       Top Products
     </h2>
     <div>
-      <Link href="products" className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">view all</Link>
+      <Link href="/travel" className="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">view all</Link>
     </div>
     </div>
     <div className="scrollbar-sm mt-4 flex space-x-4 overflow-x-auto px-4 pb-4 sm:px-5">
    
-      {newtravelData.map((hotel, index) => <Hotelcard dataSet={hotel} key={index}  />)}
+      {newtravelData.map((hotel, index) => <Hotelcard dataSet={hotel} key={index} ind={index}  />)}
    
      
 

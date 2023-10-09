@@ -6,10 +6,11 @@ import Link from 'next/link';
 
 function Page() {
   const slides = [
+    
     {
       id: 1,
-      image: '/images/slide3.JPG',
-      title: 'Saptak Playground Equipment',
+      image: '/images/slide1.png',
+      title: 'Water Fountain1',
     },
     {
       id: 2,
@@ -18,13 +19,13 @@ function Page() {
     },
     {
       id: 3,
-      image: '/images/pexels-photo-261410.jpeg',
-      title: 'Saptak Swimming Pool',
+      image: '',
+      title: 'Swimming Pool',
     },
     {
       id: 4,
       image: '/images/slide4.JPG',
-      title: 'Saptak Awnings & Pergoluxe',
+      title: 'Awnings & Pergoluxe',
     },
   ];
 

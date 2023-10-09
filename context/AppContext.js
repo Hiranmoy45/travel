@@ -16,7 +16,7 @@ export default function AppContextProvider({ children }) {
   const [loading,setLoading] =useState(false);
   const [data, setData] = useState([]);
   const [showModal1, setShowModal1] = useState(false);
-  const [showModal2, setShowModal2] = useState(false);
+  const [showModal2, setShowModal2] = useState(true);
  const submit=(formData)=>{
   setLoading(true);
     async function sendEmail(formData) {

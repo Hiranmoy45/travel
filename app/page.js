@@ -19,7 +19,6 @@ export default function page() {
 
  <Hotel/>
  <AboutUs/>
- <Travel/>
  <Contact/>
  
  <Company/>

@@ -22,7 +22,6 @@ const Header = () => {
 
     // Call the function to set the initial value
     checkScreenSize();
-
     // Add event listener to update screen size on window resize
     window.addEventListener("resize", checkScreenSize);
 

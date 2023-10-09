@@ -1,23 +1,26 @@
 'use client'
 import React, { useEffect } from "react"
-import glide from '@glidejs/glide';
+// import Glide from '@glidejs/glide'
+import Glide, { Controls, Breakpoints } from '@glidejs/glide/dist/glide.modular.esm'
+
+import '@glidejs/glide/dist/css/glide.core.min.css'; // Import Glide.js CSS
+import '@glidejs/glide/dist/css/glide.theme.min.css'; // Import Glide.js theme CSS
 import { testimonialData } from "@/data/Data";
 
 
 export default function Testimonial() {
     useEffect(() => {
-    const slider = new glide(".glide-08", {
+    const slider = new Glide(".glide-08", {
       type: "carousel",
       focusAt: 1,
       animationDuration: 4000,
       autoplay: 4500,
-      autoplay: true,
       rewind: true,
       perView: 2,
       gap: 48,
       classes: {
         nav: {
-          active: "[&>*]:bg-wuiSlate-700",
+          active: "bg-wuiSlate-700",
         },
       },
       breakpoints: {
@@ -29,7 +32,6 @@ export default function Testimonial() {
         },
       },
     }).mount()
-
     return () => {
       slider.destroy()
     }
@@ -38,7 +40,7 @@ export default function Testimonial() {
   return (
     <>
       {/*<!-- Component: Testimonial carousel --> */}
-      <div className="glide-08 relative w-full">
+      <div className="glide-08 relative w-full" >
         {/*    <!-- Slides --> */}
         <div data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap  relative flex w-full overflow-hidden p-0 pb-12 ">

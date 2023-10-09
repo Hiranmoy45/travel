@@ -128,27 +128,21 @@ const {setShowModal1}=useContext(AppContext);
         </ul>
         <hr className="line" />
         <p className="home-desc dark:text-white">
-          Guests are welcome to join the NCSN on activities such as Birdwatching
-          and Hiking at an additional charge (which can be availed of at the
-          premises) and learn about nature and the need to preserve it Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-          consequatur, harum dolorem autem blanditiis rerum. Consectetur nihil
-          numquam natus quo similique alias pariatur quis autem. Magnam optio,
-          libero impedit doloribus totam sapiente quibusdam animi dolores harum
-          consequatur nostrum, veritatis fugit corrupti nemo. Ratione blanditiis
-          id debitis dolores numquam ullam animi non ipsam expedita minus nam,
-          sequi temporibus exercitationem consectetur aut! Iste dolorem
-          provident repudiandae ut possimus natus molestiae quidem, inventore
-          repellat rerum consequuntur quisquam est numquam sit reprehenderit eos
-          laudantium, accusamus similique. Ratione, quidem repellat nihil quis
-          dignissimos necessitatibus esse? Rem quaerat ex animi provident ipsa
-          harum magnam dignissimos sit..
+         Saptak Exterio specializes in manufacturing a wide array of premium outdoor products,
+including Awnings, Water Fountains, Playground Equipment, Swimming Pools, and Tensile
+Structures. Our commitment to excellence and innovation shines through in each of these
+offerings. From providing shade and style with our awnings to adding elegance and tranquility
+with our water fountains, creating fun-filled spaces with our playground equipment, and crafting
+relaxing retreats with swimming pools, our products are meticulously designed and crafted to
+elevate the aesthetics and functionality of outdoor spaces. With Saptak Exterio, you can trust in
+top-notch quality and superior craftsmanship for all your outdoor needs.
         </p>
         <hr className="line" />
         <div className="map">
           <h3 className="dark:text-white">Location on Map</h3>
+          
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7160.636081482584!2d91.74045119170589!3d26.186330508349954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a25e55856b1%3A0x5e71de52f9b47851!2sPan%20Bazaar%2C%20Guwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1689797582230!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14323.215815970414!2d91.75542165!3d26.1705135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a597fdd3eab3b%3A0xf895e2e4e0dcd414!2sUlubari%2C%20Guwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1696266581527!5m2!1sen!2sin"
             width="600"
             height="450"
             style={{ border: 0 }}

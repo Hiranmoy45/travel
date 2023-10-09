@@ -12,10 +12,7 @@ const Notificmodel = () => {
     <>
       {showModal2 && (
         <>
-          <div
-            className="absolute inset-0 bg-slate-900/60 transition-opacity duration-300"
-            onClick={() => setShowModal2(false)}
-          ></div>
+         
           <div
             className="popper-root right-0 md:right-1/3 top-14 show "
             x-ref="popperRoot"

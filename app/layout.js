@@ -1,3 +1,4 @@
+// 'use client'
 import './globals.css';
 
 // import 'swiper/css';
@@ -11,9 +12,9 @@ import Bookingmodel from "@/components/Modal/Bookingmodel.jsx"
 import { Inter } from 'next/font/google';
 import MobileNav from '@/components/header/MobileNav';
 import Footer from '@/components/footer/Footer';
-import Notificmodel from '@/components/header/components/Notificmodel';
-import GoogleAnalytics from './GoogleAnalytics';
 
+import GoogleAnalytics from './GoogleAnalytics';
+// import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -56,14 +57,14 @@ export default function RootLayout({ children }) {
               <MobileNav/>
               <MobileNav/>
               <Bookingmodel/>
-              <Notificmodel/>
               <ToastContainer />
             </div>
           </div>
         <Footer/>
           </AppContextProvider>
           </ClientOnly>
-          
+          <script src="./node_modules/preline/dist/preline.js"></script>
+
         </body>
       </html>
     </>

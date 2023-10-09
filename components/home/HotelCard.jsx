@@ -1,46 +1,50 @@
 'use client'
+import Hard from "@/app/travel/components/Hard";
 import { AppContext } from "@/context/AppContext";
 import Link from "next/link";
 import React, { useContext } from "react";
 
-const Hotelcard = ({ dataSet }) => {
-
+const Hotelcard = ({ dataSet ,ind}) => {
+console.log(ind);
 const {setShowModal1}=useContext(AppContext);
   return (
     <>
-      <div className="flex w-72 shrink-0 flex-col">
+      <div className="flex w-72 shrink-0 flex-col" key={ind}>
       <Link href={`house/${dataSet.id}`}>
-        <img src={`images/${dataSet.imageSrc[1]}`}  className="h-48 w-full rounded-2xl object-cover object-center" alt="image"  />
+        <img src={`/thumbnail/${ind+1}.png`}  className="h-48 w-full rounded-2xl object-cover object-center" alt="image"  />
+
         </Link>
         <div className="card mx-2 -mt-8 grow rounded-2xl p-3.5">
           <div className="flex space-x-2">
-            <div
-              className={`badge rounded-full ${
-                dataSet.price> 270 ? "bg-warning" : "bg-secondary"
-              } py-1 uppercase text-white`}
+                  
+            <div className="flex flex-wrap items-center font-inter text-xs uppercase">             
+           <div className="flex items-end justify-between">
+            <Link
+              href={`house/${dataSet.id}`}
+              className="line-clamp-2 text-base font-semibold text-black dark:text-white hover:text-primary-focus"
             >
-              {dataSet.location }
+              {dataSet.name}
+            </Link>
+          
+          <div className="p-3 absolute -right-px -top-px flex h-3 w-3 items-center justify-center">
+          <Hard id={dataSet.id} imageSrc={dataSet.imageSrc} name={dataSet.name} location={dataSet.location} rating={dataSet.rating} />
             </div>
-            <div className="flex flex-wrap items-center font-inter text-xs uppercase">
-              <p>{dataSet.bedCount}</p>
-              <div className="mx-2 my-1 w-px self-stretch bg-slate-200 dark:bg-navy-500" />
-              <button onClick={()=>setShowModal1(true)}>
-              <p className="cursor-pointer">Book Now</p>
-              </button>
+            </div>
+            
             </div>
           </div>
+
          
           <div className="flex items-end justify-between">
-          <Link href={`/house/${dataSet.id}`}>
-              <p className="mt-2">
-                <span className="text-base font-medium text-slate-700 dark:text-navy-100">
-                  Enquery
-                </span>
+                        <p className="mt-2">
+                <button className="text-base font-medium text-slate-700 dark:text-navy-100"  onClick={()=>setShowModal1(true)}>
+                  Enquiry
+                </button>
                 <span className="text-xs text-slate-400 dark:text-navy-300">                 
                   Now
                 </span>
               </p>
-            </Link>
+          
             
             <p className="flex shrink-0 items-center space-x-1">
               <svg
@@ -61,6 +65,7 @@ const {setShowModal1}=useContext(AppContext);
             </p>
           </div>
         </div>
+        
       </div>
     </>
   );

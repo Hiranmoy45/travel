@@ -90,10 +90,10 @@ export const newtravelData = [
   {
     id: '1',
     imageSrc: ['ProductPhotos/AWNING/1.jpg', 'ProductPhotos/AWNING/2.jpg', 'ProductPhotos/AWNING/3.jpg', 'ProductPhotos/AWNING/4.jpg', 'ProductPhotos/AWNING/5.jpg', 'ProductPhotos/AWNING/6.jpg','ProductPhotos/AWNING/7.jpg','ProductPhotos/AWNING/8.jpg','ProductPhotos/AWNING/9.jpg','ProductPhotos/AWNING/10.jpg','ProductPhotos/AWNING/11.jpg','ProductPhotos/AWNING/12.jpg','ProductPhotos/AWNING/13.jpg','ProductPhotos/AWNING/14.jpg','ProductPhotos/AWNING/15.jpg','ProductPhotos/AWNING/16.jpg'],
-    name: 'Saptak Awnings & Pergoluxe',
+    name: 'Awnings & Pergoluxe',
     info: ['Material:Aluminium', 'USage/Application:Outdoor', 'Color:Red', 'Shape:Rectangular', 'Service Location:PAN India', 'Service Mode : Offline'],
     location: 'Guwahati',
-    desc: 'Saptak Awnings & Pergoluxe for windows, terrace, balconies, restaurants,  farmhouses, etc. Our awning contains corrosion, resistance material, which  helps to retain the shine for several years even with minimum maintenance. They are constructed with a variety of materials for example aluminum acrylic, polyester, vinyl, etc, structured on the metallic framework for support. ',
+    desc: 'Awnings & Pergoluxe for windows, terrace, balconies, restaurants,  farmhouses, etc. Our awning contains corrosion, resistance material, which  helps to retain the shine for several years even with minimum maintenance. They are constructed with a variety of materials for example aluminum acrylic, polyester, vinyl, etc, structured on the metallic framework for support. ',
       price: '270',
     rating: '5.0',
   },
@@ -246,7 +246,7 @@ export const newtravelData = [
       'ProductPhotos/PLAYGROUNDEQUIPMENTS/1 (67).JPG'
     ]
     ,
-    name: 'Saptak Playground Equipment',
+    name: 'Playground Equipment',
     info: ['Material:FRP', 'Pool Type:Outdoor', 'Service Location/City:PAN India', 'Payment Mode: Offline/Online', 'Usage/Application:Residential'],
     location: 'Guwahati',
     desc:'Saptak Playground Equipment - We continuously provide bigger and more fun play experiments for children across the country with our high-quality, commercial-grade playground equipment. Our motto is "Big on play....Low on price" which guides us every day and helps us focus on our goal of providing affordable and durable children playground equipments for sale at great prices. We deal in FRP, LLDP   Plastic, Powder coated and PU coated material. ',
@@ -280,7 +280,7 @@ export const newtravelData = [
       'ProductPhotos/swimmingpool/1 (1).jpeg'    
     ]
     ,
-    name: 'Saptak Swimming Pool',
+    name: 'Swimming Pool',
     info: ['Material: PVC', 'Built Type:Modular', 'Service Location/City:PAN India', 'Shape: Pyramid', 'Services Mode:Offline'],
     location: 'Guwahati',
     desc:'Saptak Swimming Pool is a true extension of its owner personality, whether they entertain friends or associates, throw parties or just have family together. Our pool combines innovative design with of maintenance fee quality. The latest technology. The greatest years durability. The most complete palette of shapes and sizes and options that are backed by a 10 years warranty. ',
@@ -317,7 +317,7 @@ export const newtravelData = [
     ]
     
     ,
-    name: 'Saptak Tensile membrane structure ',
+    name: 'Tensile membrane structure ',
     info: ['Material: PVC', 'Built Type:Modular', 'Service Location/City:PAN India', 'Shape: Pyramid', 'Services Mode:Offline'],
     location: 'Guwahati',
     desc:'Saptak Tensile membrane structure is most often used as a roof as they can economically and attractively span large distances. Tensile membrane structures may also be used as complete buildings, with a few common applications being sports facilities, warehousing and storage buildings, and exhibition venues. ',

@@ -4,31 +4,11 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 import { AppContext } from "@/context/AppContext";
 import Image from "next/image";
+import Hard from "./components/Hard";
 
 const Card = ({ id, imageSrc, name, location, rating }) => {
   const { data, setData, setShowModal1 } = useContext(AppContext);
-  const [isDataSaved, setIsDataSaved] = useState(false);
-
-  useEffect(() => {
-    const existingData = JSON.parse(localStorage.getItem("cards")) || [];
-    setData(existingData);
-
-    const specificDataItem = existingData.find((item) => item.id === id);
-    setIsDataSaved(!!specificDataItem);
-  }, [id]);
-
-  const handleCardClick = () => {
-    const specificDataItem = data.find((item) => item.id === id);
-    const newData = specificDataItem
-      ? data.filter((item) => item.id !== id)
-      : [...data, { id, imageSrc, name, location, rating }];
-
-    setData(newData);
-    setIsDataSaved(!specificDataItem);
-    localStorage.setItem("cards", JSON.stringify(newData));
-
-    toast.success(specificDataItem ? "Removed" : "Added successfully");
-  };
+  
 
   return (
     <div className="card" id="products">
@@ -47,25 +27,7 @@ const Card = ({ id, imageSrc, name, location, rating }) => {
       
       <div className="absolute inset-0 flex h-full w-full flex-col justify-between">
         <div className="flex justify-end p-3">
-          <button
-            className="flex items-center justify-center h-7 w-7 rounded-full bg-black/20 p-0 hover:bg-black/30 focus:bg-black/30"
-            onClick={handleCardClick}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4.5 w-4.5 text-white "
-              fill={`${isDataSaved ? "red" : "none"}`}
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
-          </button>
+          <Hard id={id} imageSrc={imageSrc} name={name} location={location} rating={rating}/>
         </div>
         <div className="rounded-lg bg-gradient-to-t from-[#19213299] via-[#19213266] to-transparent px-4 py-3 pt-14">
           <div>
@@ -78,7 +40,7 @@ const Card = ({ id, imageSrc, name, location, rating }) => {
           </div>
      
           <div className="mt-1 flex items-center space-x-3 text-slate-200">
-       
+{/*        
             <p className="flex items-center space-x-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +63,7 @@ const Card = ({ id, imageSrc, name, location, rating }) => {
                 />
               </svg>
               <span className="line-clamp-1 text-xs+">{location}</span>
-            </p>
+            </p> */}
             <p className="flex shrink-0 items-center space-x-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +85,7 @@ const Card = ({ id, imageSrc, name, location, rating }) => {
               onClick={() => setShowModal1(true)}
               className="btn space-x-2  text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer"
             >
-              Book now
+              Send Enquiry
             </button>
           </div>
         </div>
