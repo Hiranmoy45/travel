@@ -9,8 +9,8 @@ function Page() {
     
     {
       id: 1,
-      image: '/images/slide1.png',
-      title: 'Water Fountain1',
+      image: '/images/1.png',
+      title: 'Swimming Pool',
     },
     {
       id: 2,
@@ -19,8 +19,8 @@ function Page() {
     },
     {
       id: 3,
-      image: '',
-      title: 'Swimming Pool',
+      image: '/images/2.png',
+      title: 'Tensile membrane structure',
     },
     {
       id: 4,

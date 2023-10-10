@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect } from "react"
-// import Glide from '@glidejs/glide'
-import Glide, { Controls, Breakpoints } from '@glidejs/glide/dist/glide.modular.esm'
+import Glide from '@glidejs/glide'
 
 import '@glidejs/glide/dist/css/glide.core.min.css'; // Import Glide.js CSS
 import '@glidejs/glide/dist/css/glide.theme.min.css'; // Import Glide.js theme CSS
