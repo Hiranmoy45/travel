@@ -57,7 +57,7 @@ const {setShowModal1}=useContext(AppContext);
               <FontAwesomeIcon icon={farStar} className="icon" />
 
               <span className="font-medium text-slate-700 dark:text-navy-100">
-                245 Reviews
+                Reviews
               </span>
             </div>
             <div>
@@ -95,7 +95,7 @@ const {setShowModal1}=useContext(AppContext);
           </h2>
           
           <h4 className="text-2xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl ">
-          <button onClick={()=>setShowModal1(true)} className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer">book now</button>
+          <button onClick={()=>setShowModal1(true)} className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer">Send Enquiry</button>
           </h4>
         </div>
 
@@ -151,7 +151,7 @@ top-notch quality and superior craftsmanship for all your outdoor needs.
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           <b className=" dark:text-white">Guwahati , Assam , India</b>
-          <p className=" dark:text-white">It is like a home away from home.</p>
+        
         </div>
         <br className="line" />
         <div className="host">

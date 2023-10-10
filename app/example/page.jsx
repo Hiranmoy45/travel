@@ -49,9 +49,7 @@ function Page() {
     const nextSlide = (currentSlide + 1) % slides.length;
     setCurrentSlide(nextSlide);
   };
-  const handleBookNowClick = () => {
-    console.log('Book Now button clicked');
-  };
+
   return (
     <>
       <div className="carousel relative container mx-auto max-w-2xl" style={{ maxWidth: "1600px" }}>
@@ -87,7 +85,7 @@ function Page() {
                       <p className="banner-subtitle text-primary">Trending item</p>
                       <h2 className="banner-title font-bold">{slide.title}</h2>
                       <p className="banner-text">Get Started</p>
-                      <button className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer" onClick={handleBookNowClick}>book now</button>
+                      <button className="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 cursor-pointer">Send Enquiry</button>
                     </div>
                   </Link>
                 </div>
@@ -99,14 +97,7 @@ function Page() {
           <label className="prev control w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto" onClick={prev}>‹</label>
           <label className="next control w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto" onClick={next}>›</label>
 
-          {/* Add additional indicators for each slide */}
-          {/* <ol className="carousel-indicators">
-  {slides.map((slide, index) => (
-    <li key={slide.id} className="inline-block mr-3">
-      <label htmlFor={`carousel-${slide.id}`} className={`carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900 ${currentSlide === slide.id ? 'text-black' : ''}`}>•</label>
-    </li>
-  ))}
-</ol> */}
+       
 
 
         </div>
